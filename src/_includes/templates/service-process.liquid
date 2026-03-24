@@ -1,0 +1,59 @@
+<!--
+  UNIFIED TEMPLATE: Service Process Section
+  Purpose: Reusable service process steps for both general and brand-specific pages
+  Usage: Include this template where you need service process display
+  Variables:
+  - process_title (optional): Custom title for the section, defaults to "Our Repair Process"
+  - process_brand (optional): Brand name for brand-specific process, defaults to "Premium Appliance"
+  - process_style (optional): "general" or "brand", defaults to "general"
+-->
+{% assign title = process_title | default: "Our Repair Process" %}
+{% assign brand_name = process_brand | default: "Premium Appliance" %}
+{% assign style = process_style | default: "general" %}
+
+<div class="mb-16">
+  <h3 class="text-2xl font-semibold mb-8 text-primefix-orange">{{ title }}</h3>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <div class="text-center">
+      <div class="inline-flex items-center justify-center w-16 h-16 bg-primefix-orange rounded-full mb-6">
+        <span class="text-2xl font-bold text-white">1</span>
+      </div>
+      <h3 class="text-lg font-semibold mb-3 text-gray-800">Diagnosis</h3>
+      <p class="text-gray-600">
+        {% if style == "brand" %}
+          Complete diagnostic assessment of your {{ brand_name }} appliance to identify the root cause.
+        {% else %}
+          Comprehensive diagnostic assessment to identify the root cause of your appliance problem.
+        {% endif %}
+      </p>
+    </div>
+    <div class="text-center">
+      <div class="inline-flex items-center justify-center w-16 h-16 bg-primefix-orange rounded-full mb-6">
+        <span class="text-2xl font-bold text-white">2</span>
+      </div>
+      <h3 class="text-lg font-semibold mb-3 text-gray-800">Estimate</h3>
+      <p class="text-gray-600">Transparent pricing with detailed explanation of needed repairs and genuine parts.
+      </p>
+    </div>
+    <div class="text-center">
+      <div class="inline-flex items-center justify-center w-16 h-16 bg-primefix-orange rounded-full mb-6">
+        <span class="text-2xl font-bold text-white">3</span>
+      </div>
+      <h3 class="text-lg font-semibold mb-3 text-gray-800">Repair</h3>
+      <p class="text-gray-600">
+        {% if style == "brand" %}
+          Professional repair using genuine {{ brand_name }} parts and approved methods.
+        {% else %}
+          Professional repair using genuine OEM parts and manufacturer-approved methods.
+        {% endif %}
+      </p>
+    </div>
+    <div class="text-center">
+      <div class="inline-flex items-center justify-center w-16 h-16 bg-primefix-orange rounded-full mb-6">
+        <span class="text-2xl font-bold text-white">4</span>
+      </div>
+      <h3 class="text-lg font-semibold mb-3 text-gray-800">Testing</h3>
+      <p class="text-gray-600">Thorough testing to ensure optimal performance and customer satisfaction.</p>
+    </div>
+  </div>
+</div>

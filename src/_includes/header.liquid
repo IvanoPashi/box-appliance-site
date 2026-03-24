@@ -1,0 +1,194 @@
+<!-- Header -->
+<header class="bg-white shadow-lg sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <a href="/" class="hover:opacity-80 transition">
+                <img src="/assets/images/logo.svg" alt="{{ site.company }} - Sub-Zero Repair Specialists"
+                    class="h-12 w-auto" width="147" height="48">
+            </a>
+            <div class="hidden lg:flex space-x-6">
+                <a href="/" class="nav-link text-gray-700 hover:text-primefix-orange transition">Home</a>
+                <a href="/about/" class="nav-link text-gray-700 hover:text-primefix-orange transition">About Us</a>
+                <div class="relative group">
+                    <a href="#" class="nav-link text-gray-700 hover:text-primefix-orange transition">Brands</a>
+                    <div
+                        class="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-lg p-4 w-72">
+
+                        <!-- Sub-Zero -->
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-primefix-orange mb-2">🧊 Sub-Zero</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <a href="/sub-zero/"
+                                    class="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 hover:text-primefix-orange transition rounded">Home</a>
+                                <a href="/sub-zero/services/"
+                                    class="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 hover:text-primefix-orange transition rounded">Services</a>
+                                <a href="/sub-zero/about/"
+                                    class="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 hover:text-primefix-orange transition rounded">About</a>
+                                <a href="/sub-zero/contact/"
+                                    class="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 hover:text-primefix-orange transition rounded">Contact</a>
+                            </div>
+                        </div>
+
+                        <!-- Wolf -->
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-red-600 mb-2">🔥 Wolf</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <a href="/wolf/"
+                                    class="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 hover:text-primefix-orange transition rounded">Home</a>
+                                <a href="/wolf/services/"
+                                    class="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 hover:text-primefix-orange transition rounded">Services</a>
+                                <a href="/wolf/about/"
+                                    class="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 hover:text-primefix-orange transition rounded">About</a>
+                                <a href="/wolf/contact/"
+                                    class="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 hover:text-primefix-orange transition rounded">Contact</a>
+                            </div>
+                        </div>
+
+                        <!-- Cove -->
+                        <div>
+                            <h4 class="font-semibold text-primefix-orange mb-2">💎 Cove</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <a href="/cove/"
+                                    class="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 hover:text-primefix-orange transition rounded">Home</a>
+                                <a href="/cove/services/"
+                                    class="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 hover:text-primefix-orange transition rounded">Services</a>
+                                <a href="/cove/about/"
+                                    class="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 hover:text-primefix-orange transition rounded">About</a>
+                                <a href="/cove/contact/"
+                                    class="block px-2 py-1 text-sm text-gray-700 hover:bg-gray-100 hover:text-primefix-orange transition rounded">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/service-area/" class="nav-link text-gray-700 hover:text-primefix-orange transition">Service
+                    Area</a>
+                <a href="/faq/" class="nav-link text-gray-700 hover:text-primefix-orange transition">FAQ</a>
+                <a href="/contact/" class="nav-link text-gray-700 hover:text-primefix-orange transition">Contact</a>
+            </div>
+
+            <!-- Desktop Phone Button -->
+            <a href="{{ site.phone_href }}"
+                class="hidden lg:block bg-primefix-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-primefix-orange-light transition transform hover:scale-105">
+                {{ site.cta_primary }}
+            </a>
+
+            <!-- Mobile Burger Menu Button -->
+            <button class="lg:hidden burger-menu" aria-label="Open navigation menu">
+                <div class="w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                    <div class="burger-line w-6 h-0.5 bg-gray-700"></div>
+                    <div class="burger-line w-6 h-0.5 bg-gray-700"></div>
+                    <div class="burger-line w-6 h-0.5 bg-gray-700"></div>
+                </div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-white z-40 lg:hidden">
+        <div class="flex flex-col h-full">
+            <!-- Mobile Menu Header -->
+            <div class="flex justify-between items-center p-6 border-b border-gray-200">
+                <a href="/" class="hover:opacity-80 transition">
+                    <img src="/assets/images/logo.svg" alt="{{ site.company }} - Sub-Zero Repair Specialists"
+                        class="h-12 w-auto" width="147" height="48">
+                </a>
+                <button class="burger-menu" aria-label="Close navigation menu">
+                    <div class="w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                        <div class="burger-line w-6 h-0.5 bg-gray-700"></div>
+                        <div class="burger-line w-6 h-0.5 bg-gray-700"></div>
+                        <div class="burger-line w-6 h-0.5 bg-gray-700"></div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Navigation -->
+            <div class="flex-1 overflow-y-auto py-6">
+                <nav class="px-6 space-y-4">
+                    <a href="/"
+                        class="block py-3 text-lg font-medium text-gray-700 border-b border-gray-200 hover:text-primefix-orange transition">
+                        🏠 Home
+                    </a>
+                    <a href="/about/"
+                        class="block py-3 text-lg font-medium text-gray-700 border-b border-gray-200 hover:text-primefix-orange transition">
+                        ℹ️ About Us
+                    </a>
+                    <div class="py-3 text-lg font-medium text-gray-700 border-b border-gray-200">
+                        <span class="block mb-2">🔧 Brands</span>
+                        <div class="ml-4 space-y-3">
+
+                            <!-- Sub-Zero -->
+                            <div class="bg-blue-50 rounded-lg p-3">
+                                <h4 class="text-blue-600 font-semibold mb-2">🧊 Sub-Zero</h4>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <a href="/sub-zero/"
+                                        class="block py-1 text-xs text-gray-600 hover:text-primefix-orange transition">Home</a>
+                                    <a href="/sub-zero/services/"
+                                        class="block py-1 text-xs text-gray-600 hover:text-primefix-orange transition">Services</a>
+                                    <a href="/sub-zero/about/"
+                                        class="block py-1 text-xs text-gray-600 hover:text-primefix-orange transition">About</a>
+                                    <a href="/sub-zero/contact/"
+                                        class="block py-1 text-xs text-gray-600 hover:text-primefix-orange transition">Contact</a>
+                                </div>
+                            </div>
+
+                            <!-- Wolf -->
+                            <div class="bg-red-50 rounded-lg p-3">
+                                <h4 class="text-red-600 font-semibold mb-2">🔥 Wolf</h4>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <a href="/wolf/"
+                                        class="block py-1 text-xs text-gray-600 hover:text-primefix-orange transition">Home</a>
+                                    <a href="/wolf/services/"
+                                        class="block py-1 text-xs text-gray-600 hover:text-primefix-orange transition">Services</a>
+                                    <a href="/wolf/about/"
+                                        class="block py-1 text-xs text-gray-600 hover:text-primefix-orange transition">About</a>
+                                    <a href="/wolf/contact/"
+                                        class="block py-1 text-xs text-gray-600 hover:text-primefix-orange transition">Contact</a>
+                                </div>
+                            </div>
+
+                            <!-- Cove -->
+                            <div class="bg-blue-50 rounded-lg p-3">
+                                <h4 class="text-blue-600 font-semibold mb-2">💎 Cove</h4>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <a href="/cove/"
+                                        class="block py-1 text-xs text-gray-600 hover:text-primefix-orange transition">Home</a>
+                                    <a href="/cove/services/"
+                                        class="block py-1 text-xs text-gray-600 hover:text-primefix-orange transition">Services</a>
+                                    <a href="/cove/about/"
+                                        class="block py-1 text-xs text-gray-600 hover:text-primefix-orange transition">About</a>
+                                    <a href="/cove/contact/"
+                                        class="block py-1 text-xs text-gray-600 hover:text-primefix-orange transition">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/service-area/"
+                        class="block py-3 text-lg font-medium text-gray-700 border-b border-gray-200 hover:text-primefix-orange transition">
+                        📍 Service Area
+                    </a>
+                    <a href="/faq/"
+                        class="block py-3 text-lg font-medium text-gray-700 border-b border-gray-200 hover:text-primefix-orange transition">
+                        ❓ FAQ
+                    </a>
+                    <a href="/contact/"
+                        class="block py-3 text-lg font-medium text-gray-700 border-b border-gray-200 hover:text-primefix-orange transition">
+                        📞 Contact
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Mobile Menu Footer -->
+            <div class="p-6 border-t border-gray-200 bg-gray-50">
+                <a href="{{ site.phone_href }}"
+                    class="block w-full bg-primefix-orange text-white text-center py-4 rounded-lg font-semibold text-lg hover:bg-primefix-orange-light transition transform hover:scale-105 mb-4">
+                    📞 {{ site.cta_primary }}
+                </a>
+                <div class="text-center text-sm text-gray-600">
+                    <p>🕐 Available Monday to Friday</p>
+                    <p>⚡ Priority Same-Day Service</p>
+                    <p>🏆 Expert-Trained Technicians</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

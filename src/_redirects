@@ -1,0 +1,32 @@
+# Trailing slash redirects - Redirect URLs without trailing slash to with trailing slash
+/about             /about/                301
+/brands            /brands/               301
+/blog              /blog/                 301
+/contact           /contact/              301
+/faq               /faq/                  301
+/service-area      /service-area/         301
+/success           /success/              301
+
+# Brand page trailing slash redirects
+/sub-zero          /sub-zero/             301
+/wolf              /wolf/                 301
+/cove              /cove/                 301
+
+# Brand subpage trailing slash redirects
+/sub-zero/about    /sub-zero/about/       301
+/sub-zero/services /sub-zero/services/    301
+/sub-zero/faq      /sub-zero/faq/         301
+/sub-zero/contact  /sub-zero/contact/     301
+/sub-zero/service-area /sub-zero/service-area/ 301
+
+/wolf/about        /wolf/about/           301
+/wolf/services     /wolf/services/        301
+/wolf/faq          /wolf/faq/             301
+/wolf/contact      /wolf/contact/         301
+/wolf/service-area /wolf/service-area/    301
+
+/cove/about        /cove/about/           301
+/cove/services     /cove/services/        301
+/cove/faq          /cove/faq/             301
+/cove/contact      /cove/contact/         301
+/cove/service-area /cove/service-area/    301

@@ -1,0 +1,218 @@
+---
+layout: main
+eleventyComputed:
+  title: "Contact {{ site.company }} | Premium Appliance Repair Orange County"
+  description: "Contact {{ site.company }} for premium appliance repair in Orange County. Call {{ site.phone }} for same-day service. Fast, reliable, factory-trained techs."
+keywords: "contact premium appliance repair, Orange County appliance repair, emergency repair service"
+permalink: /contact/
+---
+
+{% assign page_title = "Contact " | append: site.company %}
+{% assign page_subtitle = "Your trusted premium appliance repair specialists in Orange County" %}
+{% assign page_description = "Ready to help with all your Sub-Zero, Wolf, and Cove appliance repair needs" %}
+
+{% include "templates/page-header.liquid" %}
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <div>
+          <h2 class="text-3xl font-bold mb-6 text-primefix-navy">Contact Information</h2>
+          <h3 class="text-2xl font-semibold mb-8 text-primefix-navy">Get In Touch</h3>
+
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primefix-orange-light rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-white text-xl">📞</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Phone</h3>
+                <p class="text-gray-700">{{ site.phone }}</p>
+                <p class="text-sm text-gray-600">Available Monday to Friday, 9 AM - 6 PM</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primefix-purple rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-white text-xl">📍</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Address</h3>
+                <p class="text-gray-700">{{ site.street_address }}<br>{{ site.city }}, {{ site.state }} {{ site.zip }}</p>
+                <p class="text-sm text-gray-600">Serving all of Orange County</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-white text-xl">✉️</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Email</h3>
+                <p class="text-gray-700">{{ site.email }}</p>
+                <p class="text-sm text-gray-600">24-hour response guaranteed</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-primefix-navy rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-white text-xl">🕐</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Priority Service</h3>
+                <p class="text-gray-700">Same-day repairs available during business hours</p>
+                <p class="text-sm text-gray-600">Call for urgent appliance issues</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Area -->
+          <div class="mt-12 bg-primefix-cream p-6 rounded-lg">
+            <h3 class="font-semibold text-lg mb-3">Service Area Coverage</h3>
+            <p class="text-gray-700 mb-3">We proudly serve all of Orange County, including:</p>
+            <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+              <div>• Irvine & Newport Beach</div>
+              <div>• Mission Viejo & Laguna Hills</div>
+              <div>• Anaheim & Fullerton</div>
+              <div>• Costa Mesa & Huntington Beach</div>
+              <div>• And all surrounding areas</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-8 text-primefix-navy">Schedule Service</h3>
+
+          <form
+            class="space-y-6"
+            data-netlify="true"
+            name="contact-form"
+            method="POST"
+            action="/success/">
+              <!-- Netlify form detection -->
+            <input
+              type="hidden"
+              name="form-name"
+              value="contact-form" />
+
+            <div>
+              <label for="first_name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+              <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primefix-navy focus:border-transparent">
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primefix-navy focus:border-transparent">
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email     
+                                Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primefix-navy focus:border-transparent">
+            </div>
+
+            <div>
+              <label for="appliance_type" class="block text-sm font-medium text-gray-700 mb-2">Appliance     
+                                Type</label>
+              <select
+                id="appliance_type"
+                name="appliance_type"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primefix-navy focus:border-transparent">
+                <option value="">Select appliance type</option>
+                <option value="sub-zero-refrigerator">Sub-Zero Refrigerator</option>
+                <option value="sub-zero-freezer">Sub-Zero Freezer</option>
+                <option value="sub-zero-wine-cooler">Sub-Zero Wine Cooler</option>
+                <option value="sub-zero-ice-maker">Sub-Zero Ice Maker</option>
+                <option value="wolf-range">Wolf Range</option>
+                <option value="wolf-oven">Wolf Oven</option>
+                <option value="wolf-cooktop">Wolf Cooktop</option>
+                <option value="wolf-hood">Wolf Ventilation Hood</option>
+                <option value="cove-dishwasher">Cove Dishwasher</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="model_number" class="block text-sm font-medium text-gray-700 mb-2">Model Number     
+                                (if known)</label>
+              <input
+                type="text"
+                id="model_number"
+                name="model_number"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primefix-navy focus:border-transparent"
+                placeholder="e.g., BI-36U">
+            </div>
+
+            <div>
+              <label for="problem_description" class="block text-sm font-medium text-gray-700 mb-2">Problem Description</label>
+              <textarea
+                rows="4"
+                id="problem_description"
+                name="problem_description"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primefix-navy focus:border-transparent"
+                placeholder="Please describe the issue you're experiencing..."></textarea>
+            </div>
+
+            <div>
+              <fieldset>
+                <legend class="block text-sm font-medium text-gray-700 mb-2">Preferred Contact Method
+                </legend>
+                <div class="flex space-x-4">
+                  <label class="flex items-center">
+                    <input
+                      type="radio"
+                      name="contact_method"
+                      value="phone"
+                      class="mr-2">
+                    <span>Phone</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input
+                      type="radio"
+                      name="contact_method"
+                      value="email"
+                      class="mr-2">
+                    <span>Email</span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="w-full bg-primefix-navy text-white py-4 rounded-lg font-semibold hover:bg-primefix-purple transition">
+              Schedule Service Call
+            </button>
+          </form>
+
+          <div class="mt-6 text-center">
+            <p class="text-sm text-gray-600">Or call us directly:</p>
+            <a href="{{ site.phone_href }}" class="text-lg font-semibold text-primefix-orange hover:text-primefix-orange-light transition">
+              {{ site.phone }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+
+<!-- CTA Section -->
+{% include "templates/cta-section.liquid" %}

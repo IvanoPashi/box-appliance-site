@@ -1,0 +1,157 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Homepage -->
+    <url>
+        <loc>{{ site.url }}/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Main Pages -->
+    <url>
+        <loc>{{ site.url }}/about/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/brands/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/service-area/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/contact/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/faq/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/success/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/blog/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Sub-Zero Blog Articles -->
+    {% assign subzero_articles = collections.sub-zeroBlog %}
+    {% for article in subzero_articles %}
+    <url>
+        <loc>{{ site.url }}{{ article.url | normalizeUrl }}</loc>
+        <lastmod>{{ article.data.lastModified | dateIso | default: article.date | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    {% endfor %}
+
+    <!-- Wolf Blog Articles -->
+    {% assign wolf_articles = collections.wolfBlog %}
+    {% for article in wolf_articles %}
+    <url>
+        <loc>{{ site.url }}{{ article.url | normalizeUrl }}</loc>
+        <lastmod>{{ article.data.lastModified | dateIso | default: article.date | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    {% endfor %}
+
+    <!-- Cove Blog Articles -->
+    {% assign cove_articles = collections.coveBlog %}
+    {% for article in cove_articles %}
+    <url>
+        <loc>{{ site.url }}{{ article.url | normalizeUrl }}</loc>
+        <lastmod>{{ article.data.lastModified | dateIso | default: article.date | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    {% endfor %}
+
+    <!-- Brand Pages -->
+    {% for brand_key in site.brands %}
+    <url>
+        <loc>{{ site.url }}/{{ brand_key }}/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/{{ brand_key }}/about/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/{{ brand_key }}/services/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/{{ brand_key }}/blog/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>{{ site.url }}/{{ brand_key }}/service-area/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/{{ brand_key }}/faq/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/{{ brand_key }}/contact/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    {% endfor %}
+
+    <!-- Location Pages - High Priority for Local SEO -->
+    {% for brand_key in site.brands %}
+    {% for location in locations.locations %}
+    <url>
+        <loc>{{ site.url }}/{{ brand_key }}/{{ location.name | slugify }}/</loc>
+        <lastmod>{{ "" | dateIso }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    {% endfor %}
+    {% endfor %}
+</urlset>

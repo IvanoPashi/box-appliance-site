@@ -1,0 +1,24 @@
+<!-- Mobile Menu Navigation -->
+<div class="flex flex-col space-y-4">
+    {% if is_brand_page %}
+    <a href="/{{ current_brand }}/" class="block py-2 text-gray-700 hover:text-primefix-orange transition">Home</a>
+    <a href="/{{ current_brand }}/about/" class="block py-2 text-gray-700 hover:text-primefix-orange transition">About
+        Us</a>
+    <a href="/{{ current_brand }}/services/"
+        class="block py-2 text-gray-700 hover:text-primefix-orange transition">Services</a>
+    <a href="/{{ current_brand }}/service-area/"
+        class="block py-2 text-gray-700 hover:text-primefix-orange transition">Service Area</a>
+    <a href="/{{ current_brand }}/blog/" class="block py-2 text-gray-700 hover:text-primefix-orange transition">Blog</a>
+    <a href="/{{ current_brand }}/faq/" class="block py-2 text-gray-700 hover:text-primefix-orange transition">FAQ</a>
+    <a href="/{{ current_brand }}/contact/"
+        class="block py-2 text-gray-700 hover:text-primefix-orange transition">Contact</a>
+    {% else %}
+    <a href="/" class="block py-2 text-gray-700 hover:text-primefix-orange transition">Home</a>
+    <a href="/about/" class="block py-2 text-gray-700 hover:text-primefix-orange transition">About Us</a>
+    <a href="/brands/" class="block py-2 text-gray-700 hover:text-primefix-orange transition">Brands</a>
+    <a href="/blog/" class="block py-2 text-gray-700 hover:text-primefix-orange transition">Blog</a>
+    <a href="/service-area/" class="block py-2 text-gray-700 hover:text-primefix-orange transition">Service Area</a>
+    <a href="/faq/" class="block py-2 text-gray-700 hover:text-primefix-orange transition">FAQ</a>
+    <a href="/contact/" class="block py-2 text-gray-700 hover:text-primefix-orange transition">Contact</a>
+    {% endif %}
+</div>

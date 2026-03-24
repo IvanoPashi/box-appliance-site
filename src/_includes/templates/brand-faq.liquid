@@ -1,0 +1,359 @@
+<!--
+UNIFIED TEMPLATE: Brand FAQ Page
+Purpose: FAQ page content for brand pages
+Usage: Include this template in brand FAQ pages
+Variables: 
+- brand_data (required): Brand data from _data
+- page_title (required): Page title
+- page_subtitle (required): Page subtitle
+- page_description (required): Page description
+-->
+
+{% assign brand = brand_data %}
+
+{% include "templates/page-header.liquid" %}
+
+<!-- FAQ Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+            <!-- FAQ Introduction with Brand Logo -->
+            <div class="text-center mb-16">
+                <div class="flex justify-center mb-8">
+                    <img src="/assets/images/{{ brand.slug }}.svg" alt="{{ brand.name }} Logo" class="h-20 w-auto">
+                </div>
+                <h3 class="text-2xl font-semibold mb-6 text-primefix-orange">Frequently Asked Questions</h3>
+                <p class="text-lg text-gray-700">
+                    Get answers to the most common {{ brand.name }} appliance questions from our {{ brand.qualification
+                    | downcase }} technicians in Orange County.
+                </p>
+            </div>
+
+            <!-- FAQ Categories -->
+            <div class="grid md:grid-cols-3 gap-6 mb-16">
+                {% if brand.name == "Sub-Zero" %}
+                <div class="bg-blue-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-3">🧊</div>
+                    <h4 class="font-semibold mb-2">Refrigerator Issues</h4>
+                    <p class="text-gray-600 text-sm">Temperature, cooling, and ice maker problems</p>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-3">🔧</div>
+                    <h4 class="font-semibold mb-2">Repair & Service</h4>
+                    <p class="text-gray-600 text-sm">Warranty, parts, and repair process</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-3">🛠️</div>
+                    <h4 class="font-semibold mb-2">Maintenance</h4>
+                    <p class="text-gray-600 text-sm">Care tips and preventive maintenance</p>
+                </div>
+                {% elsif brand.name == "Wolf" %}
+                <div class="bg-red-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-3">🔥</div>
+                    <h4 class="font-semibold mb-2">Range & Oven Issues</h4>
+                    <p class="text-gray-600 text-sm">Temperature, heating, and cooking problems</p>
+                </div>
+                <div class="bg-orange-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-3">🔧</div>
+                    <h4 class="font-semibold mb-2">Repair & Service</h4>
+                    <p class="text-gray-600 text-sm">Warranty, parts, and repair process</p>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-3">🛠️</div>
+                    <h4 class="font-semibold mb-2">Maintenance</h4>
+                    <p class="text-gray-600 text-sm">Care tips and preventive maintenance</p>
+                </div>
+                {% elsif brand.name == "Cove" %}
+                <div class="bg-blue-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-3">💎</div>
+                    <h4 class="font-semibold mb-2">Dishwasher Issues</h4>
+                    <p class="text-gray-600 text-sm">Cleaning, drainage, and performance</p>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-3">🔧</div>
+                    <h4 class="font-semibold mb-2">Repair & Service</h4>
+                    <p class="text-gray-600 text-sm">Warranty, parts, and repair process</p>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl mb-3">🛠️</div>
+                    <h4 class="font-semibold mb-2">Maintenance</h4>
+                    <p class="text-gray-600 text-sm">Care tips and preventive maintenance</p>
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="space-y-6">
+                <!-- Common Issues -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800">Common {{ brand.name }} Issues</h4>
+
+                    <div class="space-y-4">
+                        {% if brand.name == "Sub-Zero" %}
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">Why is my Sub-Zero refrigerator not cooling
+                                properly?</h5>
+                            <p class="text-gray-700">
+                                Common causes include dirty condenser coils, faulty door seals, blocked air vents, or
+                                temperature control issues. Our technicians can diagnose the exact problem and provide
+                                professional repair with genuine Sub-Zero parts.
+                            </p>
+                        </div>
+
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">My Sub-Zero ice maker isn't working. What
+                                should I do?</h5>
+                            <p class="text-gray-700">
+                                Check if the ice maker is turned on and the water supply is connected. If the problem
+                                persists, it could be a water filter issue, frozen water lines, or a faulty ice maker
+                                assembly. Professional diagnosis is recommended.
+                            </p>
+                        </div>
+
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">How often should I replace my Sub-Zero water
+                                filter?</h5>
+                            <p class="text-gray-700">
+                                Sub-Zero water filters should be replaced every 6 months or when the filter status light
+                                indicates replacement is needed. Using genuine Sub-Zero filters ensures optimal
+                                performance and water quality.
+                            </p>
+                        </div>
+
+                        <div class="pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">Why is my Sub-Zero making unusual noises?</h5>
+                            <p class="text-gray-700">
+                                Unusual noises can indicate compressor issues, fan problems, or loose components. While
+                                some operational sounds are normal, persistent loud or grinding noises should be
+                                evaluated by a professional technician.
+                            </p>
+                        </div>
+                        {% elsif brand.name == "Wolf" %}
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">Why won't my Wolf gas burners light?</h5>
+                            <p class="text-gray-700">
+                                Common causes include dirty burner ports, faulty ignition electrodes, or gas supply
+                                issues. Clean the burner caps and ports first. If the problem persists, it may require
+                                professional electrode replacement or gas line inspection.
+                            </p>
+                        </div>
+
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">My Wolf oven temperature seems inaccurate. What
+                                should I do?</h5>
+                            <p class="text-gray-700">
+                                Wolf ovens can be calibrated if they're running hot or cold. However, temperature
+                                sensors or control boards may need replacement. Professional calibration ensures
+                                accurate cooking temperatures for optimal results.
+                            </p>
+                        </div>
+
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">Why is my Wolf oven not heating evenly?</h5>
+                            <p class="text-gray-700">
+                                Uneven heating can be caused by faulty heating elements, convection fan issues, or
+                                blocked air vents. Professional diagnosis can identify whether elements need replacement
+                                or if the convection system requires service.
+                            </p>
+                        </div>
+
+                        <div class="pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">What does it mean when my Wolf range displays
+                                an error code?</h5>
+                            <p class="text-gray-700">
+                                Error codes indicate specific problems with your Wolf appliance. Common codes relate to
+                                temperature sensors, ignition issues, or control board problems. Our technicians can
+                                diagnose and resolve any error code quickly.
+                            </p>
+                        </div>
+                        {% elsif brand.name == "Cove" %}
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">Why is my Cove dishwasher not cleaning
+                                properly?</h5>
+                            <p class="text-gray-700">
+                                Common causes include clogged spray arms, dirty filters, improper loading, or using the
+                                wrong detergent. Our technicians can diagnose and resolve cleaning performance issues to
+                                restore optimal operation.
+                            </p>
+                        </div>
+
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">My Cove dishwasher is making unusual noises.
+                                What should I do?</h5>
+                            <p class="text-gray-700">
+                                Cove dishwashers are designed for whisper-quiet operation. Unusual noises may indicate
+                                worn wash pump motors, damaged spray arms, or loose components requiring professional
+                                attention.
+                            </p>
+                        </div>
+
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">How often should I clean my Cove dishwasher
+                                filter?</h5>
+                            <p class="text-gray-700">
+                                Clean the filter monthly or when you notice decreased cleaning performance. A clogged
+                                filter can affect wash quality and put strain on the pump motor.
+                            </p>
+                        </div>
+
+                        <div class="pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">Why is my Cove dishwasher not draining
+                                completely?</h5>
+                            <p class="text-gray-700">
+                                Drainage issues can be caused by clogged filters, blocked drain hose, or garbage
+                                disposal problems. Professional diagnosis ensures proper resolution without damage to
+                                the appliance.
+                            </p>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Service & Repair -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800">Service & Repair Questions</h4>
+
+                    <div class="space-y-4">
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">Do you use genuine {{ brand.name }} parts?</h5>
+                            <p class="text-gray-700">
+                                Yes, we exclusively use genuine {{ brand.name }} OEM parts for all repairs. This ensures
+                                proper fit, function, and maintains your warranty coverage. Genuine parts are essential
+                                for maintaining {{ brand.name }}'s premium performance standards.
+                            </p>
+                        </div>
+
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">How long does a typical {{ brand.name }} repair
+                                take?</h5>
+                            <p class="text-gray-700">
+                                Most {{ brand.name }} repairs are completed in a single visit, typically taking 1-3
+                                hours depending on the issue. Complex repairs requiring special parts may need a
+                                follow-up visit. We'll provide a time estimate during diagnosis.
+                            </p>
+                        </div>
+
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">Do you offer same-day service for {{ brand.name
+                                }} appliances?</h5>
+                            <p class="text-gray-700">
+                                Yes, we offer same-day service for emergency {{ brand.name }} repairs throughout Orange
+                                County. Call us at {{ site.phone }} to check availability for your area and schedule an
+                                appointment.
+                            </p>
+                        </div>
+
+                        <div class="pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">What warranty do you provide on {{ brand.name
+                                }} repairs?</h5>
+                            <p class="text-gray-700">
+                                We provide a 1-year warranty on all {{ brand.name }} repairs and parts. This covers both
+                                labor and genuine {{ brand.name }} parts, giving you confidence in our work and
+                                protection for your investment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maintenance -->
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800">Maintenance & Care</h4>
+
+                    <div class="space-y-4">
+                        {% if brand.name == "Sub-Zero" %}
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">How often should I clean my Sub-Zero condenser
+                                coils?</h5>
+                            <p class="text-gray-700">
+                                Condenser coils should be cleaned every 6 months to maintain optimal efficiency. Dirty
+                                coils make the compressor work harder, leading to higher energy costs and potential
+                                breakdowns. We offer professional cleaning service.
+                            </p>
+                        </div>
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">What temperature should I set my Sub-Zero
+                                refrigerator?</h5>
+                            <p class="text-gray-700">
+                                The ideal temperature for the refrigerator section is 38°F (3°C) and 0°F (-18°C) for the
+                                freezer. These temperatures ensure food safety while maximizing energy efficiency.
+                            </p>
+                        </div>
+                        {% elsif brand.name == "Wolf" %}
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">How often should I clean my Wolf range?</h5>
+                            <p class="text-gray-700">
+                                Clean burner grates and drip pans after each use. Deep clean the oven monthly or after
+                                heavy use. Professional cleaning and maintenance should be performed annually to ensure
+                                optimal performance.
+                            </p>
+                        </div>
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">Can I use the self-cleaning feature on my Wolf
+                                oven?</h5>
+                            <p class="text-gray-700">
+                                Yes, Wolf ovens with self-cleaning features are designed for regular use. However,
+                                remove any large debris first and ensure proper ventilation. If you notice any issues
+                                during the cleaning cycle, contact a professional.
+                            </p>
+                        </div>
+                        {% elsif brand.name == "Cove" %}
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">How can I maintain my Cove dishwasher's quiet
+                                operation?</h5>
+                            <p class="text-gray-700">
+                                Regular filter cleaning, proper loading, and using quality detergent help maintain quiet
+                                operation. Professional maintenance annually ensures all components function optimally.
+                            </p>
+                        </div>
+                        <div class="border-b border-gray-200 pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">What's the best way to load my Cove dishwasher?
+                            </h5>
+                            <p class="text-gray-700">
+                                Follow loading guidelines in your manual. Avoid overcrowding, face soiled surfaces
+                                toward spray arms, and secure lightweight items. Proper loading ensures optimal cleaning
+                                performance.
+                            </p>
+                        </div>
+                        {% endif %}
+
+                        <div class="pb-4">
+                            <h5 class="font-semibold text-gray-800 mb-2">Should I repair or replace my older {{
+                                brand.name }} appliance?</h5>
+                            <p class="text-gray-700">
+                                {{ brand.name }} appliances are built to last decades. If your unit is under 15 years
+                                old, repair is typically more cost-effective. Our technicians can assess your appliance
+                                and provide honest recommendations based on its condition.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Still Have Questions -->
+            <div class="bg-{{ brand.color_class | default: 'blue' }}-50 p-8 rounded-lg mt-16 text-center">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Still Have Questions?</h3>
+                <p class="text-lg text-gray-700 mb-6">
+                    Can't find the answer you're looking for? Our {{ brand.qualification | downcase }} {{ brand.name }}
+                    technicians are ready to help with any questions about your appliance.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="{{ site.phone_href }}"
+                        class="bg-primefix-orange text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition">
+                        Call {{ site.phone }}
+                    </a>
+                    <a href="/{{ brand.slug }}/contact/"
+                        class="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition">
+                        Schedule Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+{% assign cta_style = "brand" %}
+{% assign brand_data = brand %}
+{% assign cta_title = "Need " | append: brand.name | append: " Repair Help?" %}
+{% assign cta_description = "Get expert " | append: brand.name | append: " repair service throughout Orange County" %}
+{% include "templates/cta-section.liquid" %}

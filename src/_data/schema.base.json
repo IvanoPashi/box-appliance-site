@@ -1,0 +1,1509 @@
+{
+  "organization": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://primefixrepair.com/#organization",
+    "name": "BOX APPLIANCE",
+    "alternateName": [
+      "BOX APPLIANCE Sub-Zero Repair",
+      "BOX APPLIANCE Orange County"
+    ],
+    "url": "https://primefixrepair.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://primefixrepair.com/assets/images/logo.svg",
+      "width": 200,
+      "height": 60
+    },
+    "image": "https://primefixrepair.com/assets/images/primefix-social-card.jpg",
+    "description": "Your trusted local experts for high-end Sub-Zero, Wolf, and Cove appliance repair in Orange County, CA. Our factory-trained technicians provide fast, reliable same-day service using genuine OEM parts to ensure your luxury appliances perform flawlessly. Contact us for repairs and maintenance.",
+    "foundingDate": "2015",
+    "slogan": "Orange County's Premier Appliance Repair Experts",
+    "telephone": "(949) 883-8072",
+    "email": "service@primefixrepair.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7461 Edinger Ave",
+      "addressLocality": "Huntington Beach",
+      "addressRegion": "CA",
+      "postalCode": "92647",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "California",
+      "containsPlace": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Orange County"
+        }
+      ]
+    },
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.68456,
+        "longitude": -117.82654
+      },
+      "geoRadius": "50000"
+    },
+    "knowsAbout": [
+      "Sub-Zero Appliance Repair",
+      "Wolf Appliance Repair",
+      "Cove Appliance Repair",
+      "Premium Appliance Maintenance",
+      "Factory Training",
+      "OEM Parts"
+    ],
+    "sameAs": [
+      "https://www.yelp.com/biz/primefix-appliances-irvine",
+      "https://www.google.com/maps/place/PrimeFix+Appliances"
+    ]
+  },
+  "business": {
+    "@context": "https://schema.org",
+    "@type": [
+      "LocalBusiness",
+      "HomeAndConstructionBusiness"
+    ],
+    "@id": "https://primefixrepair.com/#business",
+    "name": "BOX APPLIANCE",
+    "alternateName": "BOX APPLIANCE Sub-Zero Repair",
+    "description": "Your trusted local experts for high-end Sub-Zero, Wolf, and Cove appliance repair in Orange County, CA. Our factory-trained technicians provide fast, reliable same-day service using genuine OEM parts to ensure your luxury appliances perform flawlessly. Licensed, bonded, and insured with over 15 years of experience. Contact us for professional repairs and maintenance with comprehensive warranties.",
+    "url": "https://primefixrepair.com",
+    "telephone": "(949) 883-8072",
+    "email": "service@primefixrepair.com",
+    "image": [
+      "https://primefixrepair.com/assets/images/primefix-social-card.jpg",
+      "https://primefixrepair.com/assets/images/primefix-social-card-square.jpg",
+      "https://primefixrepair.com/assets/images/logo.svg"
+    ],
+    "logo": "https://primefixrepair.com/assets/images/logo.svg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7461 Edinger Ave",
+      "addressLocality": "Huntington Beach",
+      "addressRegion": "CA",
+      "postalCode": "92647",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.68456,
+      "longitude": -117.82654
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Irvine",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Orange County"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Newport Beach",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Orange County"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Costa Mesa",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Orange County"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Mission Viejo",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Orange County"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Laguna Hills",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Orange County"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Laguna Beach",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Orange County"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Laguna Niguel",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Orange County"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Huntington Beach",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Orange County"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Anaheim",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Orange County"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Santa Ana",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Orange County"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "San Clemente",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Orange County"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Rancho Santa Margarita",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Orange County"
+        }
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Orange County",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "California"
+        }
+      }
+    ],
+    "serviceType": [
+      "Appliance Repair",
+      "Appliance Maintenance",
+      "Premium Appliance Repair",
+      "Sub-Zero Refrigerator Repair",
+      "Wolf Range Repair",
+      "Cove Dishwasher Repair",
+      "Refrigerator Repair",
+      "Freezer Repair",
+      "Wine Cooler Repair",
+      "Ice Maker Repair",
+      "Dishwasher Repair",
+      "Range Repair",
+      "Oven Repair",
+      "Cooktop Repair"
+    ],
+    "priceRange": "$$",
+    "openingHours": "Mon-Fri 9:00 AM - 6:00 PM",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "9:00AM",
+        "closes": "6:00PM"
+      }
+    ],
+    "paymentAccepted": [
+      "Cash",
+      "Credit Card",
+      "Check",
+      "Visa",
+      "MasterCard",
+      "American Express",
+      "Discover"
+    ],
+    "currenciesAccepted": "USD",
+    "founder": {
+      "@type": "Person",
+      "name": "BOX APPLIANCE Team"
+    },
+    "foundingDate": "2015",
+    "slogan": "Orange County's Premier Appliance Repair Experts",
+    "knowsAbout": [
+      "Sub-Zero Refrigerator Repair",
+      "Wolf Range Repair",
+      "Cove Dishwasher Repair",
+      "Premium Appliance Maintenance",
+      "Factory Training",
+      "OEM Parts Installation"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "148",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Michael Chen"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Excellent service! My Sub-Zero refrigerator wasn't cooling properly, and the BOX APPLIANCE technician diagnosed and fixed it the same day. Professional work with genuine parts.",
+        "datePublished": "2024-12-15"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sarah Wilson"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Outstanding Wolf oven repair! The technician was knowledgeable, used genuine parts, and my oven works like new. Highly recommend BOX APPLIANCE for premium appliance repair.",
+        "datePublished": "2024-11-28"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "David Rodriguez"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Great experience with Cove dishwasher repair. Fast response, fair pricing, and professional service. They really know premium appliances.",
+        "datePublished": "2024-11-10"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Jennifer Lee"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Exceptional service! My Sub-Zero ice maker wasn't working, and the technician arrived within 2 hours. Fixed it the same day with genuine parts. Professional and knowledgeable.",
+        "datePublished": "2024-12-20"
+      }
+    ],
+    "sameAs": [
+      "https://www.yelp.com/biz/primefix-appliances-irvine",
+      "https://www.google.com/maps/place/PrimeFix+Appliances",
+      "https://www.facebook.com/PrimeFixAppliances",
+      "https://www.instagram.com/primefixappliances"
+    ],
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "Same Day Service",
+        "description": "Priority same-day repair service during business hours",
+        "availability": "InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Factory Training",
+        "description": "All technicians are factory-trained on premium appliance brands",
+        "availability": "InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Genuine Parts",
+        "description": "Only genuine OEM parts used for all repairs",
+        "availability": "InStock"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Premium Appliance Repair Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Refrigerator Repair",
+            "description": "Professional refrigerator repair and maintenance services for all premium brands",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "BOX APPLIANCE",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "7461 Edinger Ave",
+                "addressLocality": "Huntington Beach",
+                "addressRegion": "CA",
+                "postalCode": "92647",
+                "addressCountry": "US"
+              },
+              "telephone": "(949) 883-8072",
+              "priceRange": "$$",
+              "image": "https://primefixrepair.com/assets/images/logo.svg"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Freezer Repair",
+            "description": "Expert freezer repair and troubleshooting for all premium brands",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "BOX APPLIANCE",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "7461 Edinger Ave",
+                "addressLocality": "Huntington Beach",
+                "addressRegion": "CA",
+                "postalCode": "92647",
+                "addressCountry": "US"
+              },
+              "telephone": "(949) 883-8072",
+              "priceRange": "$$",
+              "image": "https://primefixrepair.com/assets/images/logo.svg"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Wine Cooler Repair",
+            "description": "Specialized wine cooler repair services for premium appliances",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "BOX APPLIANCE",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "7461 Edinger Ave",
+                "addressLocality": "Huntington Beach",
+                "addressRegion": "CA",
+                "postalCode": "92647",
+                "addressCountry": "US"
+              },
+              "telephone": "(949) 883-8072",
+              "priceRange": "$$",
+              "image": "https://primefixrepair.com/assets/images/logo.svg"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Dishwasher Repair",
+            "description": "Professional dishwasher repair and maintenance services",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "BOX APPLIANCE",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "7461 Edinger Ave",
+                "addressLocality": "Huntington Beach",
+                "addressRegion": "CA",
+                "postalCode": "92647",
+                "addressCountry": "US"
+              },
+              "telephone": "(949) 883-8072",
+              "priceRange": "$$",
+              "image": "https://primefixrepair.com/assets/images/logo.svg"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Range and Cooktop Repair",
+            "description": "Expert range and cooktop repair services for premium appliances",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "BOX APPLIANCE",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "7461 Edinger Ave",
+                "addressLocality": "Huntington Beach",
+                "addressRegion": "CA",
+                "postalCode": "92647",
+                "addressCountry": "US"
+              },
+              "telephone": "(949) 883-8072",
+              "priceRange": "$$",
+              "image": "https://primefixrepair.com/assets/images/logo.svg"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "localBusiness": {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://primefixrepair.com/#localbusiness",
+    "name": "BOX APPLIANCE",
+    "image": [
+      "https://primefixrepair.com/assets/images/primefix-social-card.jpg",
+      "https://primefixrepair.com/assets/images/primefix-social-card-square.jpg",
+      "https://primefixrepair.com/assets/images/logo.svg"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7461 Edinger Ave",
+      "addressLocality": "Huntington Beach",
+      "addressRegion": "CA",
+      "postalCode": "92647",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.6846,
+      "longitude": -117.8265
+    },
+    "url": "https://primefixrepair.com",
+    "telephone": "(949) 883-8072",
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "9:00AM",
+        "closes": "6:00PM"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "148",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Michael Chen"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Excellent service! My Sub-Zero refrigerator wasn't cooling properly, and the BOX APPLIANCE technician diagnosed and fixed it the same day. Professional work with genuine parts.",
+        "datePublished": "2024-12-15"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sarah Wilson"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Outstanding Wolf oven repair! The technician was knowledgeable, used genuine parts, and my oven works like new. Highly recommend BOX APPLIANCE for premium appliance repair.",
+        "datePublished": "2024-11-28"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "David Rodriguez"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Great experience with Cove dishwasher repair. Fast response, fair pricing, and professional service. They really know premium appliances.",
+        "datePublished": "2024-11-10"
+      }
+    ],
+    "sameAs": [
+      "https://www.yelp.com/biz/primefix-appliances-irvine",
+      "https://www.google.com/maps/place/PrimeFix+Appliances",
+      "https://www.facebook.com/PrimeFixAppliances",
+      "https://www.instagram.com/primefixappliances"
+    ]
+  },
+  "website": {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://primefixrepair.com/",
+    "name": "BOX APPLIANCE",
+    "description": "Professional premium appliance repair services in Orange County, CA. Factory-trained technicians, same-day service, genuine parts.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://primefixrepair.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    },
+    "sameAs": [
+      "https://www.yelp.com/biz/primefix-appliances-irvine",
+      "https://www.google.com/maps/place/PrimeFix+Appliances"
+    ]
+  },
+  "faq": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you offer same-day premium appliance repair service in Orange County?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We offer same-day priority repair service throughout Orange County during our business hours (Monday to Friday, 9:00 AM - 6:00 PM) for urgent premium appliance issues. Our centrally located Irvine facility allows us to respond within 2 hours for priority calls during business hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are your technicians factory trained for premium appliance brands?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. All BOX APPLIANCE technicians are factory trained for major premium brands including Sub-Zero, Wolf, and Cove. They receive ongoing training on the latest models and repair techniques to ensure manufacturer-approved service."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What warranty do you provide on appliance repairs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide a comprehensive 2-year warranty on all appliance repairs and parts. This covers both labor and genuine OEM parts used in the repair. Our warranty is one of the most comprehensive in Orange County, giving you peace of mind with your investment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you use genuine OEM parts for repairs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we exclusively use genuine OEM parts for all repairs. We maintain a comprehensive inventory of common parts for Sub-Zero, Wolf, and Cove appliances and can expedite special orders for rare components. Using genuine parts ensures optimal performance and maintains your appliance's warranty."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you repair wine coolers in Orange County?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we specialize in premium wine cooler repair including dual-zone temperature control, humidity systems, LED lighting, and vibration issues. Our technicians understand the precise requirements for wine storage and can restore your wine cooler to optimal performance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas in Orange County do you service?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We service all of Orange County including Irvine, Newport Beach, Costa Mesa, Mission Viejo, Laguna Hills, Huntington Beach, Anaheim, Fullerton, and surrounding areas. Our central Irvine location allows us to reach most locations within 30 minutes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I schedule preventive maintenance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We recommend annual preventive maintenance for optimal performance. This includes cleaning condenser coils, checking door seals, calibrating temperatures, and inspecting all components. Regular maintenance can prevent 80% of common appliance problems and extend appliance life."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long do premium appliances typically last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "With proper maintenance, premium appliances like Sub-Zero, Wolf, and Cove typically last 15-20 years or more. Regular professional maintenance can extend this lifespan significantly. We've serviced units that are over 25 years old and still running efficiently with proper care and genuine parts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are common signs my appliance needs repair?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common signs include temperature fluctuations, unusual noises, ice maker problems, water leaks, frost buildup, and error codes on the display. If you notice any of these issues, it's best to call for professional diagnosis to prevent further damage and costly repairs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you repair ice makers that aren't working?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! Ice maker problems are one of our specialties. Common issues include no ice production, small or misshapen ice, unusual noises, and water leaks. We diagnose and repair all ice maker components including water valves, motors, thermostats, and control boards."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide emergency repair services on weekends?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer emergency repair services during business hours Monday to Friday, 9:00 AM - 6:00 PM. For urgent after-hours situations, please leave a message and we'll respond first thing the next business day. We understand that appliance failures can be inconvenient, and we prioritize quick response times during our operating hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I do if my appliance is making unusual noises?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unusual noises can indicate various issues from simple to serious. Turn off the appliance if noises are loud or grinding. Common causes include worn fan motors, failing compressors, or loose components. Call us immediately for diagnosis to prevent further damage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I know if my refrigerator compressor is failing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Signs of compressor failure include not cooling, running constantly, unusual clicking or humming sounds, and higher energy bills. Compressor issues are serious and require immediate professional attention. Early diagnosis can sometimes save the compressor with proper repair."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I perform any appliance maintenance myself safely?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, basic maintenance like cleaning the exterior, organizing contents, and changing water filters can be done safely. However, avoid opening panels, adjusting internal components, or attempting electrical repairs. Professional service ensures safety and maintains warranty coverage."
+        }
+      }
+    ]
+  },
+  "services": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Sub-Zero Refrigerator Repair",
+      "description": "Professional Sub-Zero refrigerator repair services in Orange County. Factory-trained technicians, genuine parts, same-day service available.",
+      "serviceType": "Refrigerator Repair",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "BOX APPLIANCE",
+        "@id": "https://primefixrepair.com/#business"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Orange County"
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "Sub-Zero"
+      },
+      "slogan": "Expert Sub-Zero Repair to Keep Your Food Fresh."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Wolf Range and Oven Repair",
+      "description": "Expert Wolf range and oven repair services in Orange County. Skilled technicians, genuine Wolf parts, professional service.",
+      "serviceType": "Appliance Repair",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "BOX APPLIANCE",
+        "@id": "https://primefixrepair.com/#business"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Orange County"
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "Wolf"
+      },
+      "slogan": "Precision Wolf Appliance Repair for the Modern Kitchen."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Cove Dishwasher Repair",
+      "description": "Professional Cove dishwasher repair services in Orange County. Specialized technicians, genuine parts, comprehensive warranty.",
+      "serviceType": "Appliance Repair",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "BOX APPLIANCE",
+        "@id": "https://primefixrepair.com/#business"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Orange County"
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "Cove"
+      },
+      "slogan": "Reliable Cove Dishwasher Repair for Spotless Results."
+    }
+  ],
+  "breadcrumb": {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://primefixrepair.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Premium Appliance Brands",
+        "item": "https://primefixrepair.com/brands"
+      }
+    ]
+  },
+  "localPages": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Sub-Zero Repair Orange County | Expert Service | BOX APPLIANCE",
+      "url": "https://primefixrepair.com/sub-zero",
+      "description": "Orange County's Sub-Zero specialists! Expert refrigerator, freezer & wine cooler repair. Factory-trained techs, same-day service. Call (949) 883-8072!",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://primefixrepair.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Premium Appliance Brands",
+            "item": "https://primefixrepair.com/brands"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Sub-Zero Repair",
+            "item": "https://primefixrepair.com/sub-zero"
+          }
+        ]
+      },
+      "mainEntity": {
+        "@type": "Service",
+        "name": "Sub-Zero Repair Service",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "BOX APPLIANCE",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "7461 Edinger Ave",
+            "addressLocality": "Huntington Beach",
+            "addressRegion": "CA",
+            "postalCode": "92647",
+            "addressCountry": "US"
+          },
+          "telephone": "(949) 883-8072",
+          "priceRange": "$$",
+          "image": "https://primefixrepair.com/assets/images/logo.svg"
+        },
+        "areaServed": "Orange County, CA"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Wolf Repair Orange County | Professional Service | BOX APPLIANCE",
+      "url": "https://primefixrepair.com/wolf",
+      "description": "Orange County's Wolf cooking experts! Professional range, oven & cooktop repair. Factory-trained techs, same-day service. Call (949) 883-8072!",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://primefixrepair.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Premium Appliance Brands",
+            "item": "https://primefixrepair.com/brands"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Wolf Repair",
+            "item": "https://primefixrepair.com/wolf"
+          }
+        ]
+      },
+      "mainEntity": {
+        "@type": "Service",
+        "name": "Wolf Repair Service",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "BOX APPLIANCE",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "7461 Edinger Ave",
+            "addressLocality": "Huntington Beach",
+            "addressRegion": "CA",
+            "postalCode": "92647",
+            "addressCountry": "US"
+          },
+          "telephone": "(949) 883-8072",
+          "priceRange": "$$",
+          "image": "https://primefixrepair.com/assets/images/logo.svg"
+        },
+        "areaServed": "Orange County, CA"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Cove Repair Orange County | Expert Service | BOX APPLIANCE",
+      "url": "https://primefixrepair.com/cove",
+      "description": "Orange County's Cove dishwasher experts! Professional luxury dishwasher repair & maintenance. Factory-trained techs, same-day service. Call (949) 883-8072!",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://primefixrepair.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Premium Appliance Brands",
+            "item": "https://primefixrepair.com/brands"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Cove Repair",
+            "item": "https://primefixrepair.com/cove"
+          }
+        ]
+      },
+      "mainEntity": {
+        "@type": "Service",
+        "name": "Cove Repair Service",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "BOX APPLIANCE",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "7461 Edinger Ave",
+            "addressLocality": "Huntington Beach",
+            "addressRegion": "CA",
+            "postalCode": "92647",
+            "addressCountry": "US"
+          },
+          "telephone": "(949) 883-8072",
+          "priceRange": "$$",
+          "image": "https://primefixrepair.com/assets/images/logo.svg"
+        },
+        "areaServed": "Orange County, CA"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "About BOX APPLIANCE | Premium Appliance Repair Orange County",
+      "url": "https://primefixrepair.com/about",
+      "description": "Learn about BOX APPLIANCE, Orange County's premier appliance repair specialists. Factory-trained techs, same-day service, expert Sub-Zero, Wolf, Cove repair.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://primefixrepair.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Us",
+            "item": "https://primefixrepair.com/about"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Contact BOX APPLIANCE | Premium Appliance Repair Orange County",
+      "url": "https://primefixrepair.com/contact",
+      "description": "Contact BOX APPLIANCE for premium appliance repair in Orange County. Call (949) 883-8072 for same-day service. Bonded, insured, factory-trained techs.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://primefixrepair.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://primefixrepair.com/contact"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Service Areas | Orange County Appliance Repair | BOX APPLIANCE",
+      "url": "https://primefixrepair.com/service-area",
+      "description": "Premium appliance repair throughout Orange County: Irvine, Newport Beach, Anaheim, Costa Mesa, and surrounding areas. Same-day emergency service.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://primefixrepair.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Service Area",
+            "item": "https://primefixrepair.com/service-area"
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Premium Appliance Brands | Sub-Zero, Wolf, Cove | BOX APPLIANCE",
+      "url": "https://primefixrepair.com/brands",
+      "description": "Professional repair & maintenance for premium appliance brands in Orange County. Sub-Zero, Wolf, and Cove specialists with same-day service, genuine parts.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://primefixrepair.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Premium Appliance Brands",
+            "item": "https://primefixrepair.com/brands"
+          }
+        ]
+      }
+    }
+  ],
+  "howTo": {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Know When Your Premium Appliance Needs Repair",
+    "description": "Learn the warning signs that indicate your Sub-Zero, Wolf, or Cove appliance needs professional repair service.",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://primefixrepair.com/assets/images/primefix-social-card.jpg"
+    },
+    "totalTime": "PT5M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Check for Temperature Issues",
+        "text": "Monitor if your refrigerator isn't maintaining proper temperature or your oven isn't heating correctly.",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://primefixrepair.com/assets/images/primefix-social-card.jpg"
+        }
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Listen for Unusual Noises",
+        "text": "Pay attention to grinding, clicking, or humming sounds that weren't there before.",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://primefixrepair.com/assets/images/primefix-social-card.jpg"
+        }
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Look for Error Codes",
+        "text": "Check your appliance display for any error codes or warning lights.",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://primefixrepair.com/assets/images/primefix-social-card.jpg"
+        }
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Call Professional Technicians",
+        "text": "Contact BOX APPLIANCE at (949) 883-8072 for expert diagnosis and repair using genuine OEM parts.",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://primefixrepair.com/assets/images/primefix-social-card.jpg"
+        }
+      }
+    ]
+  },
+  "applianceRepairService": {
+    "@context": "https://schema.org",
+    "@type": [
+      "LocalBusiness",
+      "HomeAndConstructionBusiness"
+    ],
+    "@id": "https://primefixrepair.com/#applianceservice",
+    "name": "BOX APPLIANCE - Premium Appliance Repair",
+    "alternateName": [
+      "BOX APPLIANCE Sub-Zero Repair",
+      "BOX APPLIANCE Wolf Repair",
+      "BOX APPLIANCE Cove Repair",
+      "BOX APPLIANCE Orange County Appliance Repair"
+    ],
+    "description": "Orange County's premier appliance repair service specializing in Sub-Zero, Wolf, and Cove luxury appliances. Factory-trained technicians provide same-day service with genuine OEM parts and comprehensive warranties.",
+    "image": [
+      "https://primefixrepair.com/assets/images/primefix-social-card.jpg",
+      "https://primefixrepair.com/assets/images/primefix-social-card-square.jpg",
+      "https://primefixrepair.com/assets/images/logo.svg"
+    ],
+    "logo": "https://primefixrepair.com/assets/images/logo.svg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7461 Edinger Ave",
+      "addressLocality": "Huntington Beach",
+      "addressRegion": "CA",
+      "postalCode": "92647",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.6846,
+      "longitude": -117.8265
+    },
+    "url": "https://primefixrepair.com",
+    "telephone": "(949) 883-8072",
+    "email": "service@primefixrepair.com",
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "9:00AM",
+        "closes": "6:00PM"
+      }
+    ],
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.68456,
+        "longitude": -117.82654
+      },
+      "geoRadius": "50000"
+    },
+    "areaServed": [
+      "Orange County, CA",
+      "Irvine, CA",
+      "Newport Beach, CA",
+      "Costa Mesa, CA",
+      "Mission Viejo, CA",
+      "Laguna Hills, CA",
+      "Huntington Beach, CA",
+      "Anaheim, CA",
+      "Fullerton, CA",
+      "Aliso Viejo, CA",
+      "Laguna Beach, CA",
+      "Dana Point, CA",
+      "San Clemente, CA",
+      "Yorba Linda, CA",
+      "Placentia, CA",
+      "Tustin, CA",
+      "Lake Forest, CA",
+      "Rancho Santa Margarita, CA"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Premium Appliance Repair Services",
+      "itemListElement": [
+        {
+          "@type": "OfferCatalog",
+          "name": "Sub-Zero Appliance Repair",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Sub-Zero Refrigerator Repair",
+                "serviceType": "Appliance Repair"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Sub-Zero Freezer Repair",
+                "serviceType": "Appliance Repair"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Sub-Zero Wine Cooler Repair",
+                "serviceType": "Appliance Repair"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Sub-Zero Ice Maker Repair",
+                "serviceType": "Appliance Repair"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Wolf Appliance Repair",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Wolf Range Repair",
+                "serviceType": "Appliance Repair"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Wolf Oven Repair",
+                "serviceType": "Appliance Repair"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Wolf Cooktop Repair",
+                "serviceType": "Appliance Repair"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Cove Appliance Repair",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cove Dishwasher Repair",
+                "serviceType": "Appliance Repair"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "148",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Michael Chen"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Excellent service! My Sub-Zero refrigerator wasn't cooling properly, and the BOX APPLIANCE technician diagnosed and fixed it the same day. Professional work with genuine parts.",
+        "datePublished": "2024-12-15"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sarah Wilson"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Outstanding Wolf oven repair! The technician was knowledgeable, used genuine parts, and my oven works like new. Highly recommend BOX APPLIANCE for premium appliance repair.",
+        "datePublished": "2024-11-28"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "David Rodriguez"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Great experience with Cove dishwasher repair. Fast response, fair pricing, and professional service. They really know premium appliances.",
+        "datePublished": "2024-11-10"
+      }
+    ],
+    "paymentAccepted": [
+      "Cash",
+      "Credit Card",
+      "Check"
+    ],
+    "currenciesAccepted": "USD",
+    "foundingDate": "2015",
+    "knowsAbout": [
+      "Sub-Zero Refrigerator Repair",
+      "Wolf Range Repair",
+      "Cove Dishwasher Repair",
+      "Premium Appliance Maintenance",
+      "Factory Training",
+      "OEM Parts Installation",
+      "Appliance Diagnostics",
+      "Emergency Appliance Repair",
+      "Wine Cooler Repair",
+      "Ice Maker Repair"
+    ],
+    "sameAs": [
+      "https://www.yelp.com/biz/primefix-appliances-irvine",
+      "https://www.google.com/maps/place/PrimeFix+Appliances",
+      "https://www.facebook.com/PrimeFixAppliances",
+      "https://www.instagram.com/primefixappliances"
+    ]
+  },
+  "subZeroRepairService": {
+    "@context": "https://schema.org",
+    "@type": [
+      "LocalBusiness",
+      "HomeAndConstructionBusiness"
+    ],
+    "@id": "https://primefixrepair.com/sub-zero/#service",
+    "name": "BOX APPLIANCE Sub-Zero Appliance Repair - Orange County",
+    "description": "Expert Sub-Zero refrigerator, freezer, wine cooler, and ice maker repair in Orange County. Factory-trained technicians, genuine Sub-Zero parts, same-day service available.",
+    "image": [
+      "https://primefixrepair.com/assets/images/sub-zero-hero.webp",
+      "https://primefixrepair.com/assets/images/sub-zero-big.svg",
+      "https://primefixrepair.com/assets/images/primefix-social-card.jpg"
+    ],
+    "logo": "https://primefixrepair.com/assets/images/logo.svg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7461 Edinger Ave",
+      "addressLocality": "Huntington Beach",
+      "addressRegion": "CA",
+      "postalCode": "92647",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.6846,
+      "longitude": -117.8265
+    },
+    "url": "https://primefixrepair.com/sub-zero",
+    "telephone": "(949) 883-8072",
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "9:00AM",
+        "closes": "6:00PM"
+      }
+    ],
+    "areaServed": "Orange County, CA",
+    "serviceType": "Sub-Zero Appliance Repair",
+    "brand": {
+      "@type": "Brand",
+      "name": "Sub-Zero"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "89",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  },
+  "wolfRepairService": {
+    "@context": "https://schema.org",
+    "@type": [
+      "LocalBusiness",
+      "HomeAndConstructionBusiness"
+    ],
+    "@id": "https://primefixrepair.com/wolf/#service",
+    "name": "BOX APPLIANCE Wolf Appliance Repair - Orange County",
+    "description": "Professional Wolf range, oven, cooktop, and ventilation repair in Orange County. Factory-trained technicians, genuine Wolf parts, comprehensive warranty.",
+    "image": [
+      "https://primefixrepair.com/assets/images/wolf-hero.webp",
+      "https://primefixrepair.com/assets/images/wolf-big.svg",
+      "https://primefixrepair.com/assets/images/primefix-social-card.jpg"
+    ],
+    "logo": "https://primefixrepair.com/assets/images/logo.svg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7461 Edinger Ave",
+      "addressLocality": "Huntington Beach",
+      "addressRegion": "CA",
+      "postalCode": "92647",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.6846,
+      "longitude": -117.8265
+    },
+    "url": "https://primefixrepair.com/wolf",
+    "telephone": "(949) 883-8072",
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "9:00AM",
+        "closes": "6:00PM"
+      }
+    ],
+    "areaServed": "Orange County, CA",
+    "serviceType": "Wolf Appliance Repair",
+    "brand": {
+      "@type": "Brand",
+      "name": "Wolf"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "67",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  },
+  "coveRepairService": {
+    "@context": "https://schema.org",
+    "@type": [
+      "LocalBusiness",
+      "HomeAndConstructionBusiness"
+    ],
+    "@id": "https://primefixrepair.com/cove/#service",
+    "name": "BOX APPLIANCE Cove Appliance Repair - Orange County",
+    "description": "Expert Cove dishwasher repair and service in Orange County. Factory-trained technicians, genuine Cove parts, professional installation and maintenance.",
+    "image": [
+      "https://primefixrepair.com/assets/images/cove-hero.webp",
+      "https://primefixrepair.com/assets/images/cove-big.svg",
+      "https://primefixrepair.com/assets/images/primefix-social-card.jpg"
+    ],
+    "logo": "https://primefixrepair.com/assets/images/logo.svg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7461 Edinger Ave",
+      "addressLocality": "Huntington Beach",
+      "addressRegion": "CA",
+      "postalCode": "92647",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.6846,
+      "longitude": -117.8265
+    },
+    "url": "https://primefixrepair.com/cove",
+    "telephone": "(949) 883-8072",
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "9:00AM",
+        "closes": "6:00PM"
+      }
+    ],
+    "areaServed": "Orange County, CA",
+    "serviceType": "Cove Appliance Repair",
+    "brand": {
+      "@type": "Brand",
+      "name": "Cove"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "43",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{% comment %}
+Context-Aware Navigation Component
+This navigation adapts based on whether we're on a brand page or main site
+{% endcomment %}
+
+{% include 'brand-context' %}
+
+<!-- Header -->
+<header class="bg-white shadow-lg sticky top-0 z-50" role="banner">
+    <nav class="container mx-auto px-6 py-4" role="navigation" aria-label="Main navigation">
+        <div class="flex justify-between items-center">
+            <a href="/" class="hover:opacity-80 transition">
+                <img src="/assets/images/logo.svg"
+                    alt="{{ site.company }} - {{ brand.name | default: 'Appliances' }} Repair Specialists"
+                    class="h-12 w-auto" width="147" height="48">
+            </a>
+            <div class="hidden lg:flex space-x-6">
+                {% if is_brand_page %}
+                {% include 'components/navigation/brand-nav.liquid', brand_key: current_brand %}
+                {% else %}
+                {% include 'components/navigation/main-nav.liquid' %}
+                {% endif %}
+            </div>
+
+            <!-- Desktop Phone Button -->
+            <a href="{{ site.phone_href }}"
+                class="hidden lg:block bg-primefix-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-primefix-orange-light transition transform hover:scale-105">
+                {{ site.cta_primary }}
+            </a>
+
+            <!-- Mobile Burger Menu Button -->
+            <button class="lg:hidden burger-menu" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                <div class="w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                    <div class="burger-line w-6 h-0.5 bg-gray-700"></div>
+                    <div class="burger-line w-6 h-0.5 bg-gray-700"></div>
+                    <div class="burger-line w-6 h-0.5 bg-gray-700"></div>
+                </div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-white z-40 lg:hidden">
+        <div class="flex flex-col h-full">
+            <!-- Mobile Menu Header -->
+            <div class="flex justify-between items-center p-6 border-b border-gray-200">
+                <a href="/" class="hover:opacity-80 transition">
+                    <img src="/assets/images/logo.svg"
+                        alt="{{ site.company }} - {{ brand.name | default: 'Appliances' }} Repair Specialists"
+                        class="h-12 w-auto" width="147" height="48">
+                </a>
+                <button class="burger-menu" aria-label="Close navigation menu">
+                    <div class="w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                        <div class="burger-line w-6 h-0.5 bg-gray-700"></div>
+                        <div class="burger-line w-6 h-0.5 bg-gray-700"></div>
+                        <div class="burger-line w-6 h-0.5 bg-gray-700"></div>
+                    </div>
+                </button>
+            </div> <!-- Mobile Menu Body -->
+            <div class="flex-grow p-6 overflow-y-auto">
+                {% include 'components/navigation/mobile-nav.liquid' %}
+            </div>
+
+            <!-- Mobile Menu Footer -->
+            <div class="p-6 border-t border-gray-200">
+                <a href="{{ site.phone_href }}"
+                    class="block w-full text-center bg-primefix-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-primefix-orange-light transition transform hover:scale-105">
+                    {{ site.cta_primary }}
+                </a>
+            </div>
+        </div>
+    </div>
+</header>

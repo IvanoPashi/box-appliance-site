@@ -1,0 +1,44 @@
+<!--
+COMMON TEMPLATE: SEO Introduction Article
+Purpose: SEO-optimized introduction section with hero image and company overview
+Usage: Include this template in main pages that need SEO content
+Dependencies: site data, hero image
+-->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Content Side -->
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-4xl font-bold text-primefix-navy mb-6">
+                        Orange County's Premier Premium Appliance Repair Specialists
+                    </h2>
+                    <p class="text-xl text-gray-700 mb-6">
+                        When your premium appliances need expert care, trust {{ site.company }} to deliver
+                        exceptional repair services throughout Orange County. We specialize in Sub-Zero, Wolf,
+                        and Cove appliances, providing same-day service with genuine OEM parts and factory-trained
+                        technicians.
+                    </p>
+                </div>
+
+                <!-- Image Side -->
+                <div class="order-1 lg:order-2">
+                    <div class="relative">
+                        <img src="/assets/images/main-hero.webp"
+                            alt="Professional Sub-Zero appliance repair service in Orange County"
+                            class="rounded-lg shadow-xl w-full h-auto" width="1024" height="1024">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-primefix-navy/20 to-transparent rounded-lg">
+                        </div>
+                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm p-4 rounded-lg">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                <span class="text-sm font-medium text-gray-800">Available for Same-Day Service</span>
+                            </div>
+                            <p class="text-xs text-gray-600 mt-1">Call {{ site.phone }} now</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

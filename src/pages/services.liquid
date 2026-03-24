@@ -1,0 +1,75 @@
+---
+layout: main
+eleventyComputed:
+  title: "Premium Appliance Brands | Sub-Zero, Wolf, Cove | {{ site.company }}"
+description: "Professional repair & maintenance for premium appliance brands in Orange County. Sub-Zero, Wolf, and Cove specialists with same-day service, genuine parts."
+subtitle: "Expert repair and maintenance services for luxury appliance brands"
+keywords: "Sub-Zero repair, Wolf repair, Cove repair, appliance maintenance, premium appliance brands, Orange County
+appliance repair, appliance maintenance services"
+permalink: /brands/
+---
+
+{% include "templates/page-header.liquid" %}
+
+{% include "templates/brands-showcase.liquid" %}
+
+<!-- General Service Information -->
+<section class="container mx-auto px-4 py-6">
+  <div class="mb-16 bg-gray-50 p-8 rounded-lg">
+    <h3 class="text-2xl font-semibold mb-6 text-primefix-navy">How to Find Your Appliance Model and Serial  
+            Number</h3>
+    <p class="text-lg text-gray-700 mb-6">
+      Before scheduling your appliance repair service, it's helpful to have your model and serial number  
+            ready. This information helps our technicians prepare for your service call with the right parts and
+            tools.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Sub-Zero Appliances:</h3>
+        <ul class="space-y-3 text-gray-700">
+          <li>• Open the refrigerator door</li>
+          <li>• Look for a silver label on the upper left or right interior wall</li>
+          <li>• The model number starts with "BI" for built-in units or "PRO" for professional series
+          </li>
+          <li>• Serial number is typically 6-8 digits</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Wolf Appliances:</h3>
+        <ul class="space-y-3 text-gray-700">
+          <li>• Check inside the oven door or on the oven frame</li>
+          <li>• Look on the back or side of ranges</li>
+          <li>• For cooktops, check underneath or on the side</li>
+          <li>• Model numbers typically start with "SO" for ovens or "GR" for ranges</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Cove Appliances:</h3>
+        <ul class="space-y-3 text-gray-700">
+          <li>• Open the dishwasher door</li>
+          <li>• Look for the label on the left or right side of the tub</li>
+          <li>• May also be located on the door frame</li>
+          <li>• Model numbers typically start with "DW"</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-8 p-6 bg-blue-100 rounded-lg">
+      <p class="text-primefix-navy font-semibold">💡 Pro Tip: Take a photo of the label with your phone  
+                before calling. This ensures accuracy and speeds up our diagnostic process.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container mx-auto px-4 py-6">
+  <!-- Service Process -->
+  {% assign process_title = "Our Premium Appliance Repair Process" %}
+  {% assign process_style = "general" %}
+  {% include "templates/service-process.liquid" %}</section>
+
+<!-- Why Choose Us Component -->
+{% include "templates/why-choose-us.liquid" %}
+
+<!-- CTA Section -->
+{% include "templates/cta-section.liquid" %}

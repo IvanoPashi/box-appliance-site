@@ -1,0 +1,188 @@
+---
+layout: base
+eleventyComputed:
+brand: "{{ brand }}"
+page_title: "{{ title }}"
+page_description: "{{ description }}"
+page_keywords: "{{ keywords }}"
+ogTitle: "{{ ogTitle }}"
+ogDescription: "{{ ogDescription }}"
+ogImage: "/assets/images/{{ brand }}-repair-hero.webp"
+localBusinessData: "{{ localBusiness | jsonify }}"
+---
+
+{% case brand %}
+{% when 'sub-zero' %}
+{% assign brand_data = sub-zero %}
+{% when 'wolf' %}
+{% assign brand_data = wolf %}
+{% when 'cove' %}
+{% assign brand_data = cove %}
+{% endcase %}
+
+<!-- Local Business Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ localBusiness.name }}",
+  "image": "{{ site.url }}{{ ogImage }}",
+  "telephone": "{{ site.phone }}",
+  "email": "{{ site.email }}",
+  "url": "{{ site.url }}{{ canonical }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.address }}",
+    "addressLocality": "{{ site.city }}",
+    "addressRegion": "{{ site.state }}",
+    "postalCode": "{{ site.zip }}",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "33.6846",
+    "longitude": "-117.8265"
+  },
+  "openingHours": "{{ site.business_hours }}",
+  "priceRange": "$$",
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "33.6846",
+      "longitude": "-117.8265"
+    },
+    "geoRadius": "50000"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "{{ brand_data.name }} Appliance Repair & Maintenance Services",
+    "itemListElement": [
+      {% for service in brand_data.services %}
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "{{ service.title }}",
+          "description": "{{ service.description }}"
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "{{ location.name }}",
+    "containedInPlace": {
+      "@type": "State",
+      "name": "California"
+    }
+  }
+}
+</script>
+
+<!-- Location-Specific Hero Section -->
+<section class="hero-bg text-white py-20 relative overflow-hidden">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-5xl font-bold mb-8">
+                        {{ brand_data.name }} Appliance Repair & Maintenance in {{ location.name }}, CA
+                    </h1>
+                    <p class="text-xl mb-8 opacity-90">
+                        Professional {{ brand_data.name | downcase }} repair and maintenance services in {{
+                        location.name }},
+                        California. Same-day service available.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="{{ site.phone_href }}"
+                            class="bg-primefix-orange text-white px-8 py-4 rounded-lg font-semibold hover:bg-primefix-orange-light transition transform hover:scale-105">
+                            📞 {{ site.cta_primary }}
+                        </a>
+                        <a href="/{{ brand_data.slug }}/services/"
+                            class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primefix-navy transition">
+                            View Services
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="mt-8 flex flex-wrap justify-center lg:justify-start gap-6 text-sm opacity-90">
+                        <div class="flex items-center">
+                            <span class="text-primefix-orange mr-2">✓</span>
+                            {{ brand_data.qualification }} Technicians
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-primefix-orange mr-2">✓</span>
+                            Same-Day Service in {{ location.name }}
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-primefix-orange mr-2">✓</span>
+                            Genuine Parts
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Big Brand Logo -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <div
+                            class="w-80 h-80 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center p-8">
+                            <img src="/assets/images/{{ brand_data.slug }}-big.svg" alt="{{ brand_data.name }} Logo"
+                                class="w-full h-full object-contain filter brightness-0 invert">
+                        </div>
+                        <!-- Floating badges -->
+                        <div
+                            class="absolute -top-4 -right-4 bg-primefix-orange text-white px-4 py-2 rounded-full text-sm font-semibold">
+                            {{ location.name }}'s #1 Choice
+                        </div>
+                        <div
+                            class="absolute -bottom-4 -left-4 bg-white text-primefix-navy px-4 py-2 rounded-full text-sm font-semibold">
+                            1-Year Warranty
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Location-Specific Info -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Image -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <img src="/assets/images/{{ brand_data.slug }}-hero.webp"
+                            alt="{{ brand_data.name }} Appliance Repair Service in {{ location.name }}"
+                            class="w-full max-w-md rounded-2xl shadow-lg" loading="lazy">
+                    </div>
+                </div>
+                <!-- Local Statistics -->
+                <div>
+                    <div class="grid grid-cols-1 gap-12 text-center">
+                        <div>
+                            <div class="text-4xl font-bold text-primefix-orange mb-2">{{ site.experience_years }}</div>
+                            <div class="text-gray-700">Years Serving {{ location.name }} Area</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-primefix-orange mb-2">100+</div>
+                            <div class="text-gray-700">{{ brand_data.name }} Repairs in {{ location.name }}</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-primefix-orange mb-2">100%</div>
+                            <div class="text-gray-700">{{ location.name }} Customer Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Include remaining brand template sections -->
+{% assign skip_hero = true %}
+{% include "templates/brand-index.liquid" %}

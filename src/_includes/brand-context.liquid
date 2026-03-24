@@ -1,0 +1,34 @@
+{% comment %}
+Brand Context Detection
+This template detects the current brand context based on the URL path
+and sets appropriate variables for brand-specific navigation and content.
+{% endcomment %}
+
+{% capture current_brand %}
+{% if page.url contains '/sub-zero/' %}sub-zero{% endif %}
+{% if page.url contains '/wolf/' %}wolf{% endif %}
+{% if page.url contains '/cove/' %}cove{% endif %}
+{% endcapture %}
+
+{% assign current_brand = current_brand | strip %}
+
+{% if current_brand != "" %}
+{% assign is_brand_page = true %}
+{% case current_brand %}
+{% when 'sub-zero' %}
+{% assign brand_name = 'Sub-Zero' %}
+{% assign brand_emoji = '🧊' %}
+{% assign brand_color = 'primefix-navy' %}
+{% when 'wolf' %}
+{% assign brand_name = 'Wolf' %}
+{% assign brand_emoji = '🔥' %}
+{% assign brand_color = 'red-600' %}
+{% when 'cove' %}
+{% assign brand_name = 'Cove' %}
+{% assign brand_emoji = '💎' %}
+{% assign brand_color = 'blue-600' %}
+{% endcase %}
+{% else %}
+{% assign is_brand_page = false %}
+{% assign current_brand = 'main' %}
+{% endif %}

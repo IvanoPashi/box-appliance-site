@@ -1,0 +1,19 @@
+---
+layout: location
+eleventyNavigation:
+  key: Cove Locations
+  parent: Cove
+  order: 2
+pagination:
+  data: locations.locations
+  size: 1
+  alias: location
+eleventyComputed:
+  title: "Cove Repair in {{ location.name }}, CA | Professional Service"
+  description: "Expert Cove repair in {{ location.name }}, CA. Professional luxury dishwasher service. Factory-trained techs. Call {{ site.phone }}!"
+  keywords: "Cove repair in {{ location.name }}, dishwasher repair in {{ location.name }}, appliance repair in {{ location.name }}, luxury dishwasher repair in {{ location.name }}, Cove technician in {{ location.name }}"
+  ogTitle: "Cove Appliance Repair in {{ location.name }} CA | Professional Service"
+  ogDescription: "Expert Cove appliance repair in {{ location.name }}, CA. Professional luxury dishwasher service. Same-day service available."
+  brand: "cove"
+  permalink: "/cove/{{ location.name | slugify }}/"
+---

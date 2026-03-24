@@ -1,0 +1,84 @@
+<!--
+UNIFIED TEMPLATE: Why Choose Us Section
+Purpose: Why choose us section for both main pages and brand pages
+Usage: Include this template in pages that need a why choose us section
+Variables: 
+- why_style: "main" or "brand" (optional, defaults to "main")
+- brand_data (required for brand style)
+-->
+{% if why_style == "brand" and brand_data %}
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-primefix-navy mb-4">Why Choose Us for {{ brand_data.name }} Repair?</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Specialized {{ brand_data.name }} repair experts serving Orange County with excellence and reliability
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <div class="w-16 h-16 bg-primefix-cream rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-3xl">🔧</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-center">{{ brand_data.name }} Specialists</h3>
+                <p class="text-gray-600 text-center">Factory-trained {{ brand_data.name }} technicians with years of
+                    specialized experience</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-3xl">⚡</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-center">Same-Day Service</h3>
+                <p class="text-gray-600 text-center">Quick response times with same-day {{ brand_data.name }} repair
+                    appointments</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <div class="w-16 h-16 bg-primefix-cream rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-3xl">✅</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-center">Genuine Parts</h3>
+                <p class="text-gray-600 text-center">Only genuine {{ brand_data.name }} OEM parts with full warranty</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% else %}
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-primefix-navy mb-4">Why Choose {{ site.company }}?</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Premium appliance repair specialists serving Orange County with excellence and reliability
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <div class="w-16 h-16 bg-primefix-cream rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-3xl">🔧</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-center">Expert Technicians</h3>
+                <p class="text-gray-600 text-center">Factory-trained specialists with years of experience in premium
+                    appliance repair</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-3xl">⚡</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-center">Same-Day Service</h3>
+                <p class="text-gray-600 text-center">Quick response times with same-day appointments available
+                    throughout Orange County</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <div class="w-16 h-16 bg-primefix-cream rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-3xl">✅</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-center">Satisfaction Guaranteed</h3>
+                <p class="text-gray-600 text-center">Your satisfaction is our priority with guaranteed repairs and
+                    professional service</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

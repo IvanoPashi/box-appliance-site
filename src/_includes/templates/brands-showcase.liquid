@@ -1,0 +1,51 @@
+<!--
+  COMMON TEMPLATE: Brands Showcase
+  Purpose: Display all supported brands with logos and service information
+  Usage: Include this template in pages that need a brands showcase section
+  Dependencies: site.brands array, brand data files
+-->
+<!-- Brands Section -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-primefix-navy mb-4">Premium Appliance Brands We Service</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Expert repair services for the world's leading premium appliance brands with genuine OEM parts  
+                and specialized technicians
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {% for brand_key in site.brands %}
+        {% if brand_key == 'sub-zero' %}
+          {% assign brand = sub-zero %}
+        {% elsif brand_key == 'wolf' %}
+          {% assign brand = wolf %}
+        {% elsif brand_key == 'cove' %}
+          {% assign brand = cove %}
+        {% endif %}
+        <div class="brand-card bg-gray-50 p-8 rounded-xl text-center hover:shadow-lg transition-shadow">
+          <div class="w-30 h-20 bg-white rounded-lg flex items-center justify-center mx-auto mb-6 shadow-md">
+            <img
+              src="/assets/images/{{ brand.slug }}.svg"
+              alt="{{ brand.name }} Logo"
+              class="h-12 object-contain">
+          </div>
+          <h3 class="text-2xl font-semibold mb-4">{{ brand.name }}</h3>
+          <p class="text-gray-600 mb-6">{{ brand.description }}</p>
+          <div class="mb-6">
+            <h3 class="text-sm font-semibold text-gray-800 mb-3">Services We Provide:</h3>
+            {% for service in brand.services %}
+              <span class="inline-block bg-primefix-cream text-primefix-navy px-3 py-1 rounded-full text-sm mr-2 mb-2">
+                {{ service.title }}
+              </span>
+            {% endfor %}
+          </div>
+          <a href="/{{ brand_key }}/" class="bg-primefix-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-primefix-orange-light transition">
+            {{ brand.name }} Services
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

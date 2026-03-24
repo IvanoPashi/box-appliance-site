@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+{% assign article_meta_author = author %}
+{% if author == "{{ site.company }} Team" %}
+  {% assign article_meta_author = site.company | append: " Team" %}
+{% elsif author == "{{ site.company }}" %}
+  {% assign article_meta_author = site.company %}
+{% endif %}
+{% assign resolved_title = title | replace: "{{ site.company }}", site.company | replace: "{{ site.phone }}", site.phone | replace: "{{ site.email }}", site.email %}
+{% assign resolved_description = description | replace: "{{ site.company }}", site.company | replace: "{{ site.phone }}", site.phone | replace: "{{ site.email }}", site.email %}
+{% assign resolved_keywords = keywords | replace: "{{ site.company }}", site.company | replace: "{{ site.phone }}", site.phone | replace: "{{ site.email }}", site.email %}
+{% assign resolved_og_title = ogTitle | replace: "{{ site.company }}", site.company | replace: "{{ site.phone }}", site.phone | replace: "{{ site.email }}", site.email %}
+{% assign resolved_og_description = ogDescription | replace: "{{ site.company }}", site.company | replace: "{{ site.phone }}", site.phone | replace: "{{ site.email }}", site.email %}
+<html lang="en" class="smooth-scroll">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>{% if title %}{{ resolved_title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="title" content="{% if title %}{{ resolved_title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="description" content="{% if description %}{{ resolved_description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="keywords" content="{% if keywords %}{{ resolved_keywords }}{% else %}{{ site.keywords }}{% endif %}">
+
+      <!-- Enhanced SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="{{ site.author }}">
+    <meta name="language" content="en-US">
+    <meta name="geo.region" content="US-CA">
+    <meta name="geo.placename" content="Orange County, California">
+    <meta name="geo.position" content="33.6846;-117.8265">
+    <meta name="ICBM" content="33.6846, -117.8265">
+    <meta name="revisit-after" content="3 days">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="classification" content="appliance repair, Sub-Zero, Wolf, Cove, Orange County">
+    <meta name="theme-color" content="#032640">
+
+      <!-- Content Security Policy (Fallback - HTTP headers preferred) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+
+      <!-- Enhanced Business & Local SEO -->
+    <meta name="business:contact_data:street_address" content="{{ site.address }}">
+    <meta name="business:contact_data:locality" content="{{ site.city }}">
+    <meta name="business:contact_data:region" content="{{ site.state }}">
+    <meta name="business:contact_data:postal_code" content="{{ site.zip }}">
+    <meta name="business:contact_data:country_name" content="United States">
+    <meta name="business:contact_data:phone_number" content="{{ site.phone }}">
+    <meta name="business:contact_data:email" content="{{ site.email }}">
+
+      <!-- Service & Industry Meta -->
+    <meta name="service-area" content="Orange County, CA">
+    <meta name="service-type" content="appliance repair">
+    <meta name="service-brands" content="Sub-Zero, Wolf, Cove">
+    <meta name="industry" content="Home Services">
+    <meta name="category" content="Appliance Repair">
+    <meta name="business-hours" content="Mon-Fri 9:00 AM - 6:00 PM">
+    <meta name="service-radius" content="100 miles">
+
+      <!-- Performance & Core Web Vitals -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+      <!-- Preload Critical Resources -->
+    <link
+      rel="preload"
+      href="/css/style.css"
+      as="style">
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      as="style">
+
+      <!-- Preload logo on all pages -->
+  <link
+      rel="preload"
+      href="/assets/images/logo.svg"
+      as="image">
+
+    <!-- Conditionally preload brand SVGs only on relevant pages -->
+    {% assign current_url = page.url | downcase %}
+    {% if current_url == '/' or current_url contains 'brands' %}
+      <link
+        rel="preload"
+        href="/assets/images/sub-zero.svg"
+        as="image">
+      <link
+        rel="preload"
+        href="/assets/images/wolf.svg"
+        as="image">
+      <link
+        rel="preload"
+        href="/assets/images/cove.svg"
+        as="image">
+    {% elsif current_url contains 'sub-zero' %}
+      <link
+        rel="preload"
+        href="/assets/images/sub-zero-big.svg"
+        as="image">
+      <link
+        rel="preload"
+        href="/assets/images/sub-zero.svg"
+        as="image">
+    {% elsif current_url contains 'wolf' %}
+      <link
+        rel="preload"
+        href="/assets/images/wolf-big.svg"
+        as="image">
+      <link
+        rel="preload"
+        href="/assets/images/wolf.svg"
+        as="image">
+    {% elsif current_url contains 'cove' %}
+      <link
+        rel="preload"
+        href="/assets/images/cove-big.svg"
+        as="image">
+      <link
+        rel="preload"
+        href="/assets/images/cove.svg"
+        as="image">
+    {% endif %}
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ site.url }}{% if canonical %}{{ canonical | normalizeUrl }}{% else %}{{ page.url | normalizeUrl }}{% endif %}">
+
+      <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{% if canonical %}{{ canonical | normalizeUrl }}{% else %}{{ page.url | normalizeUrl }}{% endif %}">
+    <meta property="og:title" content="{% if ogTitle %}{{ resolved_og_title }}{% elsif title %}{{ resolved_title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{% if ogDescription %}{{ resolved_og_description }}{% elsif description %}{{ resolved_description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:image" content="{{ site.url }}/assets/images/primefix-social-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="{{ site.url }}/assets/images/primefix-social-card-square.jpg">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:site_name" content="{{ site.company }}">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ site.url }}{% if canonical %}{{ canonical | normalizeUrl }}{% else %}{{ page.url | normalizeUrl }}{% endif %}">
+    <meta name="twitter:title" content="{% if ogTitle %}{{ resolved_og_title }}{% elsif title %}{{ resolved_title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if ogDescription %}{{ resolved_og_description }}{% elsif description %}{{ resolved_description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{{ site.url }}/assets/images/primefix-social-card.jpg">
+
+    <!-- Article-specific meta tags -->
+    {% if date %}
+      <meta property="article:published_time" content="{{ date | date: '%Y-%m-%d' }}">
+      <meta property="article:author" content="{{ article_meta_author | default: site.company }}">
+      {% for tag in tags %}
+        <meta property="article:tag" content="{{ tag }}">
+      {% endfor %}
+    {% endif %}
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {{ schema.organization | json }}
+    </script>
+
+    <script type="application/ld+json">
+      {{ schema.business | json }}
+    </script>
+
+    <script type="application/ld+json">
+      {{ schema.localBusiness | json }}
+    </script>
+
+    {% if page.url == '/' %}
+      <script type="application/ld+json">
+        {{ schema.applianceRepairService | json }}
+      </script>
+    {% endif %}
+
+    {% if page.url == '/faq/' %}
+      <script type="application/ld+json">
+        {{ schema.faq | json }}
+      </script>
+    {% endif %}
+
+    {% if page.url == '/' %}
+      <script type="application/ld+json">
+        {{ schema.howTo | json }}
+      </script>
+    {% endif %}
+
+    {% if page.url == '/brands/' or page.url contains '/sub-zero/' or page.url contains '/wolf/' or page.url contains '/cove/' %}
+      <script type="application/ld+json">
+        {{ schema.services | json }}
+      </script>
+    {% endif %}
+
+    {% if page.url contains '/sub-zero/' %}
+      <script type="application/ld+json">
+        {{ schema.subZeroRepairService | json }}
+      </script>
+    {% endif %}
+
+    {% if page.url contains '/wolf/' %}
+      <script type="application/ld+json">
+        {{ schema.wolfRepairService | json }}
+      </script>
+    {% endif %}
+
+    {% if page.url contains '/cove/' %}
+      <script type="application/ld+json">
+        {{ schema.coveRepairService | json }}
+      </script>
+    {% endif %}
+
+    <script type="application/ld+json">
+      {{ schema.breadcrumb | json }}
+    </script>
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon and App Icons -->
+    <!-- Basic favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/favicon.ico">
+
+      <!-- Modern PNG favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon-16x16.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon-32x32.png">
+
+      <!-- Apple Touch Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png">
+
+      <!-- Android Chrome Icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-chrome-192x192.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/android-chrome-512x512.png">
+
+      <!-- Web App Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+      <!-- Theme colors for different browsers -->
+    <meta name="theme-color" content="#032640">
+    <meta name="msapplication-TileColor" content="#032640">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
+  <!-- Safari pinned tab icon (if you have it) -->
+  <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1e40af"> -->
+  </head>
+
+  <body class="bg-primefix-cream">
+    {% include "header-context-aware.liquid" %}
+
+    <main role="main">
+      {{ content }}
+    </main>
+
+    {% include "footer.liquid" %}
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+
+</html>

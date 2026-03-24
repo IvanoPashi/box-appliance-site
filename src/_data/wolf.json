@@ -1,0 +1,150 @@
+{
+  "name": "Wolf",
+  "slug": "wolf",
+  "color_class": "primefix-orange",
+  "qualification": "Experienced",
+  "experience": "10+ years",
+  "warranty": "1-Year",
+  "accent": "🔥",
+  "logo": "/assets/images/wolf.svg",
+  "description": "Professional cooking appliances, ranges and maintenance",
+  "models": [
+    "Gas Ranges (GR Series)",
+    "Dual Fuel Ranges (DF Series)",
+    "Gas Cooktops (CG Series)",
+    "Electric Cooktops (CE Series)",
+    "Wall Ovens (E Series)",
+    "Steam Ovens (CSO Series)",
+    "Convection Steam Ovens",
+    "Warming Drawers",
+    "Rangetops",
+    "Outdoor Grills"
+  ],
+  "hero": {
+    "image": "/assets/images/wolf-repair-hero.webp",
+    "services_text": "From ranges to ovens, we service and maintain all Wolf cooking appliances"
+  },
+  "services": [
+    {
+      "title": "Range Repair & Maintenance",
+      "description": "Professional repair and maintenance for all Wolf range models and configurations",
+      "icon": "🔥",
+      "color": "red",
+      "highlight": "Expert Care",
+      "details": [
+        "Gas burner issues",
+        "Electric element problems",
+        "Temperature control repair",
+        "Ignition system service",
+        "Control panel repair",
+        "Oven door alignment",
+        "Preventive maintenance"
+      ]
+    },
+    {
+      "title": "Oven Repair & Maintenance",
+      "description": "Complete oven repair and maintenance including convection and steam systems",
+      "icon": "🔥",
+      "color": "red",
+      "highlight": "Professional",
+      "details": [
+        "Convection fan repair",
+        "Steam system service",
+        "Temperature calibration",
+        "Door seal replacement",
+        "Heating element repair",
+        "Preventive maintenance"
+      ]
+    },
+    {
+      "title": "Cooktop Repair & Maintenance",
+      "description": "Gas and electric cooktop repair and maintenance with OEM parts",
+      "icon": "🔥",
+      "color": "red",
+      "highlight": "Reliable",
+      "details": [
+        "Gas valve repair",
+        "Electric element replacement",
+        "Control knob service",
+        "Surface cleaning",
+        "Safety system checks"
+      ]
+    }
+  ],
+  "whyChooseUs": [
+    {
+      "title": "Wolf Authorized",
+      "description": "Licensed technicians specialized in Wolf appliance repair",
+      "icon": "🏆"
+    },
+    {
+      "title": "Professional Service",
+      "description": "Expert repair with genuine Wolf parts and warranty",
+      "icon": "🔧"
+    },
+    {
+      "title": "Quick Turnaround",
+      "description": "Efficient service to get your Wolf appliances working fast",
+      "icon": "⚡"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much does Wolf appliance repair cost?",
+      "answer": "Wolf repair costs depend on the specific issue and parts required. We provide transparent pricing and use genuine Wolf parts. Contact us for a free estimate on your Wolf appliance repair."
+    },
+    {
+      "question": "Do you repair all Wolf appliance models?",
+      "answer": "Yes, we service all Wolf ranges, ovens, cooktops, and cooking appliances. Our expert technicians are trained on all Wolf models and configurations."
+    },
+    {
+      "question": "How quickly can you repair my Wolf appliance?",
+      "answer": "Most Wolf repairs are completed the same day. We stock common Wolf parts and our technicians are equipped to handle most issues during the first visit."
+    },
+    {
+      "question": "What warranty do you provide on Wolf repairs?",
+      "answer": "We provide warranty coverage on all Wolf repairs and genuine Wolf parts. Labor is typically covered for 90 days, with parts carrying manufacturer warranties."
+    },
+    {
+      "question": "Are your technicians Wolf licensed?",
+      "answer": "Yes, our technicians are licensed to work on Wolf appliances and receive ongoing training to stay current with the latest Wolf technologies and repair techniques."
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Michael R.",
+      "location": "Newport Beach, CA",
+      "rating": 5,
+      "service": "Wolf Range Repair",
+      "review": "Excellent Wolf range repair! Same-day service, fair pricing, and the technician explained everything clearly. My range works better than ever."
+    },
+    {
+      "name": "Lisa H.",
+      "location": "Huntington Beach, CA",
+      "rating": 5,
+      "service": "Wolf Oven Repair",
+      "review": "Professional Wolf oven repair service. The convection system was fixed perfectly and the technician was very knowledgeable about Wolf appliances."
+    },
+    {
+      "name": "James W.",
+      "location": "Anaheim, CA",
+      "rating": 5,
+      "service": "Wolf Cooktop Repair",
+      "review": "Outstanding service on my Wolf cooktop. Fast response time and used genuine Wolf parts. The burners work perfectly now."
+    },
+    {
+      "name": "Amanda S.",
+      "location": "Orange, CA",
+      "rating": 5,
+      "service": "Wolf Range Repair",
+      "review": "Excellent Wolf range repair. The technician was punctual, professional, and fixed the temperature control issue quickly. Highly recommend!"
+    },
+    {
+      "name": "Tom B.",
+      "location": "Tustin, CA",
+      "rating": 5,
+      "service": "Wolf Oven Repair",
+      "review": "Great service on my Wolf oven. The steam system was repaired expertly and the technician provided helpful maintenance tips."
+    }
+  ]
+}

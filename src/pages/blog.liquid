@@ -1,0 +1,98 @@
+---
+layout: main
+eleventyComputed:
+  title: "Appliance Repair Blog | Expert Tips & Guides | {{ site.company }}"
+description: "Expert appliance repair tips, maintenance guides, and troubleshooting advice from factory-trained techs. Sub-Zero, Wolf, and Cove care insights."
+subtitle: "Expert tips, maintenance guides, and troubleshooting advice"
+keywords: "appliance repair blog, maintenance tips, troubleshooting guides, Sub-Zero Wolf Cove advice"
+permalink: /blog/
+---
+
+{% include "templates/page-header.liquid" %}
+
+<!-- Blog Page Section -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+      <!-- Featured Articles -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Featured Articles</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {% for post in collections.featuredBlog %}
+            <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-3 text-gray-900">
+                  <a href="{{ post.url }}" class="hover:text-primefix-orange transition">{{
+post.data.title }}</a>
+                </h3>
+                <p class="text-gray-600 mb-4">{{ post.data.description }}</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-primefix-orange font-medium">{{ post.data.brand | capitalize
+}}</span>
+                  <time class="text-sm text-gray-500">{{ post.date | date: "%B %d, %Y" }}</time>
+                </div>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Browse by Brand -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Browse by Brand</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          {% for brand_key in site.brands %}
+            {% if brand_key == 'sub-zero' %}
+              {% assign brand = sub-zero %}
+            {% elsif brand_key == 'wolf' %}
+              {% assign brand = wolf %}
+            {% elsif brand_key == 'cove' %}
+              {% assign brand = cove %}
+            {% endif %}
+            <div class="bg-gray-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+              <div class="flex justify-center mb-4">
+                <img
+                  src="{{ brand.logo }}"
+                  alt="{{ brand.name }} logo"
+                  class="h-12 w-auto">
+              </div>
+              <h3 class="text-xl font-semibold mb-3">{{ brand.name }} Guides</h3>
+              <p class="text-gray-600 mb-4">{{ brand.description }}</p>
+              <a href="/{{ brand_key }}/blog/" class="text-primefix-orange hover:text-primefix-navy font-medium">
+                View {{ brand.name }} Articles →
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Recent Posts -->
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Recent Posts</h2>
+        <div class="space-y-6">
+          {% for post in collections.blog limit: 12 %}
+            <article class="border-b border-gray-200 pb-6">
+              <div class="flex items-start justify-between">
+                <div class="flex-1">
+                  <h3 class="text-xl font-semibold mb-2">
+                    <a href="{{ post.url }}" class="hover:text-primefix-orange transition">{{
+post.data.title }}</a>
+                  </h3>
+                  <p class="text-gray-600 mb-3">{{ post.data.description }}</p>
+                  <div class="flex items-center space-x-4">
+                    <span class="text-sm text-primefix-orange font-medium">{{ post.data.brand |  capitalize }}</span>
+                    <time class="text-sm text-gray-500">{{ post.date | date: "%B %d, %Y" }}</time>
+                  </div>
+                </div>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div></section>
+
+<!-- CTA Section -->
+{% assign cta_title = "Need Expert Appliance Repair?" %}
+{% assign cta_description = "Don't wait - contact our factory-trained technicians today for professional service" %}
+{% include "templates/cta-section.liquid" %}

@@ -1,0 +1,360 @@
+<!--
+UNIFIED TEMPLATE: Brand Index Page
+Purpose: Main landing page for each brand with hero section and brand showcase
+Usage: Include this template in brand index pages
+Variables: 
+- brand_data (required): Brand data from _data
+- page_title (required): Page title
+- page_description (required): Page description
+- hero_image (optional): Hero background image
+-->
+
+{% assign brand = brand_data %}
+
+{% unless skip_hero %}
+<!-- Brand Hero Section with Big Logo -->
+<section class="hero-bg text-white py-20 relative overflow-hidden">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-5xl font-bold mb-8">
+                        {{ brand.name }} Appliance Repair & Maintenance
+                    </h1>
+                    <p class="text-xl mb-8 opacity-90">
+                        {{ brand.description }}
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="{{ site.phone_href }}"
+                            class="bg-primefix-orange text-white px-8 py-4 rounded-lg font-semibold hover:bg-primefix-orange-light transition transform hover:scale-105">
+                            📞 {{ site.cta_primary }}
+                        </a>
+                        <a href="/{{ brand.slug }}/services/"
+                            class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primefix-navy transition">
+                            View Services
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="mt-8 flex flex-wrap justify-center lg:justify-start gap-6 text-sm opacity-90">
+                        <div class="flex items-center">
+                            <span class="text-primefix-orange mr-2">✓</span>
+                            {{ brand.qualification }} Technicians
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-primefix-orange mr-2">✓</span>
+                            Same-Day Service
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-primefix-orange mr-2">✓</span>
+                            Genuine Parts
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Big Brand Logo -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <div
+                            class="w-80 h-80 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center p-8">
+                            <img src="/assets/images/{{ brand.slug }}-big.svg" alt="{{ brand.name }} Logo"
+                                class="w-full h-full object-contain filter brightness-0 invert">
+                        </div>
+                        <!-- Floating badges -->
+                        <div
+                            class="absolute -top-4 -right-4 bg-primefix-orange text-white px-4 py-2 rounded-full text-sm font-semibold">
+                            Orange County's #1
+                        </div>
+                        <div
+                            class="absolute -bottom-4 -left-4 bg-white text-primefix-navy px-4 py-2 rounded-full text-sm font-semibold">
+                            1-Year Warranty
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Brand Statistics -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Hero Image -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <img src="/assets/images/{{ brand.slug }}-hero.webp"
+                            alt="{{ brand.name }} Appliance Repair Service"
+                            class="w-full max-w-md rounded-2xl shadow-lg" loading="lazy">
+                    </div>
+                </div>
+                <!-- Statistics -->
+                <div>
+                    <div class="grid grid-cols-1 gap-12 text-center">
+                        <div>
+                            <div class="text-4xl font-bold text-primefix-orange mb-2">{{ site.experience_years }}</div>
+                            <div class="text-gray-700">Years of {{ brand.name }} Experience</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-primefix-orange mb-2">1000+</div>
+                            <div class="text-gray-700">{{ brand.name }} Repairs Completed</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-primefix-orange mb-2">100%</div>
+                            <div class="text-gray-700">Satisfaction guaranteed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endunless %}
+
+<!-- Brand Services Preview -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-gray-800">Our {{ brand.name }} Services</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Professional {{ brand.name }} repair services with {{ brand.qualification | downcase }} technicians
+                    throughout Orange County.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                {% for service in brand.services %}
+                {% if forloop.index <= 6 %} <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">{{ service.icon }}</span>
+                        <h3 class="text-xl font-semibold text-gray-800">{{ service.title }}</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">{{ service.description }}</p>
+                    {% if service.highlight %}
+                    <div
+                        class="inline-block bg-{{ brand.color_class | default: 'blue' }}-100 text-{{ brand.color_class | default: 'blue' }}-800 px-3 py-1 rounded-full text-sm font-semibold">
+                        {{ service.highlight }}
+                    </div>
+                    {% endif %}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="text-center">
+            <a href="/{{ brand.slug }}/services/"
+                class="bg-primefix-orange text-white px-8 py-3 rounded-lg font-semibold hover:bg-primefix-orange-light transition">
+                View All {{ brand.name }} Services
+            </a>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Common Problems Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-gray-800">Common {{ brand.name }} Problems</h2>
+                <p class="text-lg text-gray-600">
+                    Don't let these issues disrupt your daily routine. Our experts can fix them quickly.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% if brand.name == "Sub-Zero" %}
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-800">🧊 Temperature Issues</h3>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>• Not cooling properly</li>
+                        <li>• Temperature fluctuations</li>
+                        <li>• Freezer problems</li>
+                    </ul>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-800">❄️ Ice Maker Problems</h3>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>• No ice production</li>
+                        <li>• Ice maker leaking</li>
+                        <li>• Poor ice quality</li>
+                    </ul>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-800">🔧 Mechanical Issues</h3>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>• Compressor problems</li>
+                        <li>• Door seal issues</li>
+                        <li>• Unusual noises</li>
+                    </ul>
+                </div>
+                {% elsif brand.name == "Wolf" %}
+                <div class="bg-red-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-800">🔥 Ignition Problems</h3>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>• Burners won't light</li>
+                        <li>• Ignition system failure</li>
+                        <li>• Gas flow issues</li>
+                    </ul>
+                </div>
+                <div class="bg-orange-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-800">🌡️ Temperature Control</h3>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>• Oven not heating</li>
+                        <li>• Inaccurate temperatures</li>
+                        <li>• Uneven cooking</li>
+                    </ul>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-800">⚙️ Mechanical Issues</h3>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>• Convection fan problems</li>
+                        <li>• Door seal replacement</li>
+                        <li>• Control panel issues</li>
+                    </ul>
+                </div>
+                {% elsif brand.name == "Cove" %}
+                <div class="bg-blue-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-800">🚿 Cleaning Issues</h3>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>• Poor cleaning performance</li>
+                        <li>• Water spots on dishes</li>
+                        <li>• Soap residue problems</li>
+                    </ul>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-800">💧 Water Problems</h3>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>• Drainage issues</li>
+                        <li>• Water leaks</li>
+                        <li>• Fill problems</li>
+                    </ul>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-800">🔧 Operational Issues</h3>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>• Unusual noise levels</li>
+                        <li>• Control panel malfunctions</li>
+                        <li>• Cycle problems</li>
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Blog Posts -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 text-gray-800">Latest {{ brand.name }} Tips & Guides</h2>
+                <p class="text-lg text-gray-600">
+                    Stay informed with expert advice and maintenance tips for your {{ brand.name }} appliances.
+                </p>
+            </div>
+
+            <!-- Blog posts would be dynamically loaded here -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                {% comment %}
+                {% assign brand_posts = collections.posts | where: "data.brand", brand.slug %}
+                {% assign post_count = 0 %}
+                {% for post in brand_posts %}
+                {% if post_count < 3 %} <article
+                    class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">
+                            <a href="{{ post.url }}" class="hover:text-primefix-orange transition">
+                                {{ post.data.title }}
+                            </a>
+                        </h3>
+                        <p class="text-gray-600 mb-4">{{ post.data.excerpt }}</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+                                {{ post.date | date: "%B %d, %Y" }}
+                            </time>
+                        </div>
+                    </div>
+                    </article>
+                    {% assign post_count = post_count | plus: 1 %}
+                    {% endif %}
+                    {% endfor %}
+                    {% endcomment %}
+
+                    <!-- Placeholder blog posts -->
+                    <article class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+                                <a href="/{{ brand.slug }}/blog/" class="hover:text-primefix-orange transition">
+                                    {{ brand.name }} Maintenance Guide
+                                </a>
+                            </h3>
+                            <p class="text-gray-600 mb-4">Essential maintenance tips to keep your {{ brand.name }}
+                                appliances running smoothly.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <time datetime="2025-01-01">January 1, 2025</time>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+                                <a href="/{{ brand.slug }}/blog/" class="hover:text-primefix-orange transition">
+                                    Common {{ brand.name }} Problems
+                                </a>
+                            </h3>
+                            <p class="text-gray-600 mb-4">Learn about the most common {{ brand.name }} issues and how to
+                                prevent them.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <time datetime="2024-12-15">December 15, 2024</time>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+                                <a href="/{{ brand.slug }}/blog/" class="hover:text-primefix-orange transition">
+                                    {{ brand.name }} Troubleshooting
+                                </a>
+                            </h3>
+                            <p class="text-gray-600 mb-4">Quick troubleshooting steps for your {{ brand.name }}
+                                appliances before calling for service.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <time datetime="2024-12-01">December 1, 2024</time>
+                            </div>
+                        </div>
+                    </article>
+            </div>
+
+            <div class="text-center">
+                <a href="/{{ brand.slug }}/blog/"
+                    class="bg-primefix-orange text-white px-8 py-3 rounded-lg font-semibold hover:bg-primefix-orange-light transition">
+                    View All {{ brand.name }} Articles
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+{% assign why_style = "brand" %}
+{% assign brand_data = brand %}
+{% include "templates/why-choose-us.liquid" %}
+
+<!-- Reviews Section -->
+{% include "templates/reviews.liquid" %}
+
+<!-- Final CTA Section -->
+{% assign cta_style = "brand" %}
+{% assign brand_data = brand %}
+{% assign cta_title = "Ready to Fix Your " | append: brand.name | append: " Appliance?" %}
+{% assign cta_description = "Don't let appliance problems disrupt your routine. Contact our " | append:
+brand.qualification | downcase | append: " " | append: brand.name | append: " technicians today." %}
+{% include "templates/cta-section.liquid" %}

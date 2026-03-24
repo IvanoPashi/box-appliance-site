@@ -1,0 +1,236 @@
+<!--
+UNIFIED TEMPLATE: Brand Services Page
+Purpose: Services page content for brand pages
+Usage: Include this template in brand services pages
+Variables: 
+- brand_data (required): Brand data from _data
+- page_title (required): Page title
+- page_subtitle (required): Page subtitle
+- page_description (required): Page description
+-->
+
+{% assign brand = brand_data %}
+
+{% include "templates/page-header.liquid" %}
+
+<!-- Brand Services Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- Services Introduction with Brand Logo -->
+            <div class="text-center mb-16">
+                <div class="flex justify-center mb-8">
+                    <img src="/assets/images/{{ brand.slug }}.svg" alt="{{ brand.name }} Logo" class="h-20 w-auto">
+                </div>
+                <h3 class="text-2xl font-semibold mb-6 text-primefix-orange">Complete {{ brand.name }} Appliance Repair
+                    Services</h3>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Our {{ brand.qualification | downcase }} technicians provide comprehensive {{ brand.name }}
+                    appliance repair services throughout Orange County. We handle all {{ brand.name }} models with
+                    genuine parts and expert care.
+                </p>
+            </div>
+
+            <!-- Service Categories -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                {% for service in brand.services %}
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">{{ service.icon }}</span>
+                        <h4 class="text-xl font-semibold text-gray-800">{{ service.title }}</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">{{ service.description }}</p>
+                    <ul class="text-gray-600 space-y-2">
+                        {% for detail in service.details %}
+                        <li>• {{ detail }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% if service.highlight %}
+                    <div
+                        class="mt-4 inline-block bg-{{ brand.color_class | default: 'blue' }}-100 text-{{ brand.color_class | default: 'blue' }}-800 px-3 py-1 rounded-full text-sm font-semibold">
+                        {{ service.highlight }}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Brand Models Section -->
+            <div class="bg-{{ brand.color_class | default: 'blue' }}-50 p-8 rounded-lg mb-16">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-800">{{ brand.name }} Models We Service</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {% if brand.name == "Sub-Zero" %}
+                    <div>
+                        <h4 class="font-semibold mb-3 text-gray-800">Built-In Refrigerators</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• BI-36U Series</li>
+                            <li>• BI-42S Series</li>
+                            <li>• BI-48S Series</li>
+                            <li>• BI-36UG Series</li>
+                            <li>• BI-42SG Series</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-3 text-gray-800">Professional Series</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• PRO 48</li>
+                            <li>• PRO 42</li>
+                            <li>• PRO 36</li>
+                            <li>• PRO 30</li>
+                            <li>• PRO 24</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-3 text-gray-800">Wine Storage</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• Wine Coolers</li>
+                            <li>• Dual Zone Units</li>
+                            <li>• Single Zone Units</li>
+                            <li>• Undercounter Wine</li>
+                            <li>• Custom Wine Rooms</li>
+                        </ul>
+                    </div>
+                    {% elsif brand.name == "Wolf" %}
+                    <div>
+                        <h4 class="font-semibold mb-3 text-gray-800">Gas Ranges</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• GR304 (30")</li>
+                            <li>• GR364G (36")</li>
+                            <li>• GR484G (48")</li>
+                            <li>• GR604G (60")</li>
+                            <li>• Dual Fuel Models</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-3 text-gray-800">Electric Ranges</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• GR304E (30")</li>
+                            <li>• GR364E (36")</li>
+                            <li>• GR484E (48")</li>
+                            <li>• GR604E (60")</li>
+                            <li>• Induction Models</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-3 text-gray-800">Built-in Ovens</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• Single Wall Ovens</li>
+                            <li>• Double Wall Ovens</li>
+                            <li>• Steam Ovens</li>
+                            <li>• Convection Ovens</li>
+                            <li>• Combination Units</li>
+                        </ul>
+                    </div>
+                    {% elsif brand.name == "Cove" %}
+                    <div>
+                        <h4 class="font-semibold mb-3 text-gray-800">Built-in Models</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• 24" Built-in Dishwashers</li>
+                            <li>• Panel Ready Models</li>
+                            <li>• Stainless Steel Units</li>
+                            <li>• Integrated Dishwashers</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-3 text-gray-800">Specialty Models</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• Drawer Dishwashers</li>
+                            <li>• Compact Models</li>
+                            <li>• Custom Panel Ready</li>
+                            <li>• Commercial Style</li>
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Common Problems Section -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-primefix-orange">Common {{ brand.name }} Problems We Fix
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    {% if brand.name == "Sub-Zero" %}
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">Temperature Issues</h4>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• Refrigerator not cooling properly</li>
+                            <li>• Freezer temperature fluctuations</li>
+                            <li>• Wine cooler temperature problems</li>
+                            <li>• Inconsistent cooling zones</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">Ice Maker Problems</h4>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• Ice maker not working</li>
+                            <li>• No ice production</li>
+                            <li>• Ice maker leaking</li>
+                            <li>• Poor ice quality</li>
+                        </ul>
+                    </div>
+                    {% elsif brand.name == "Wolf" %}
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">Range Issues</h4>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• Gas burners not lighting</li>
+                            <li>• Electric elements not heating</li>
+                            <li>• Temperature inconsistencies</li>
+                            <li>• Ignition system failures</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">Oven Problems</h4>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• Oven not heating properly</li>
+                            <li>• Temperature calibration issues</li>
+                            <li>• Convection fan problems</li>
+                            <li>• Door seal replacement</li>
+                        </ul>
+                    </div>
+                    {% elsif brand.name == "Cove" %}
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">Cleaning Issues</h4>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• Poor cleaning performance</li>
+                            <li>• Water spots on dishes</li>
+                            <li>• Soap residue problems</li>
+                            <li>• Incomplete wash cycles</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">Operational Problems</h4>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• Water drainage issues</li>
+                            <li>• Unusual noise levels</li>
+                            <li>• Control panel malfunctions</li>
+                            <li>• Door seal problems</li>
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Service Process -->
+            {% assign process_title = "Our " | append: brand.name | append: " Repair Process" %}
+            {% assign process_brand = brand.name %}
+            {% assign process_style = "brand" %}
+            {% include "templates/service-process.liquid" %}
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+{% assign why_style = "brand" %}
+{% assign brand_data = brand %}
+{% include "templates/why-choose-us.liquid" %}
+
+<!-- Reviews Section -->
+{% include "templates/reviews.liquid" %}
+
+<!-- CTA Section -->
+{% assign cta_style = "brand" %}
+{% assign brand_data = brand %}
+{% assign cta_title = "Ready to Schedule Your " | append: brand.name | append: " Repair?" %}
+{% assign cta_description = "Don't let " | append: brand.name | append: " appliance problems disrupt your routine.
+Contact our expert technicians today." %}
+{% include "templates/cta-section.liquid" %}

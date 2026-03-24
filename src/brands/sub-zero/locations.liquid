@@ -1,0 +1,19 @@
+---
+layout: location
+eleventyNavigation:
+  key: Sub-Zero Locations
+  parent: Sub-Zero
+  order: 2
+pagination:
+  data: locations.locations
+  size: 1
+  alias: location
+eleventyComputed:
+  title: "Sub-Zero Repair in {{ location.name }}, CA | Expert Service"
+  description: "Expert Sub-Zero repair in {{ location.name }}, CA. Professional refrigerator, freezer & wine cooler service. Factory-trained techs. Call {{ site.phone }}!"
+  keywords: "Sub-Zero repair in {{ location.name }}, refrigerator repair in {{ location.name }}, appliance repair in {{ location.name }}, freezer repair in {{ location.name }}, wine cooler repair in {{ location.name }}, Sub-Zero technician in {{ location.name }}"
+  ogTitle: "Sub-Zero Appliance Repair {{ location.name }} CA | Expert Service"
+  ogDescription: "Expert Sub-Zero appliance repair in {{ location.name }}, CA. Professional refrigerator, freezer & wine cooler service. Same-day service available."
+  brand: "sub-zero"
+  permalink: "/sub-zero/{{ location.name | slugify }}/"
+---

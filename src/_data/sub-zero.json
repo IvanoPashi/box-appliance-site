@@ -1,0 +1,148 @@
+{
+  "name": "Sub-Zero",
+  "slug": "sub-zero",
+  "color_class": "primefix-orange",
+  "qualification": "Factory-trained",
+  "experience": "10+ years",
+  "warranty": "1-Year",
+  "accent": "🧊",
+  "logo": "/assets/images/sub-zero.svg",
+  "description": "Premium refrigeration, wine storage solutions and maintenance",
+  "models": [
+    "BI Series Built-in Refrigerators",
+    "PRO Series Professional Refrigerators",
+    "Classic Series Refrigerators",
+    "Undercounter Refrigerators",
+    "Wine Storage Units",
+    "Freezer Drawers",
+    "Ice Makers",
+    "Beverage Centers"
+  ],
+  "hero": {
+    "image": "/assets/images/main-hero.webp",
+    "services_text": "From refrigerators to wine coolers, we service and maintain all Sub-Zero appliances"
+  },
+  "services": [
+    {
+      "title": "Refrigerator Repair & Maintenance",
+      "description": "Complete refrigerator diagnostics, repair and maintenance with genuine Sub-Zero parts",
+      "icon": "🧊",
+      "color": "blue",
+      "highlight": "Same Day",
+      "details": [
+        "Temperature control issues",
+        "Ice maker malfunctions",
+        "Door seal problems",
+        "Compressor repair",
+        "Frost buildup solutions",
+        "Water filter replacement",
+        "Preventive maintenance"
+      ]
+    },
+    {
+      "title": "Freezer Repair & Maintenance",
+      "description": "Expert freezer repair and maintenance to restore optimal temperature control",
+      "icon": "❄️",
+      "color": "blue",
+      "highlight": "Expert Service",
+      "details": [
+        "Defrost system repair",
+        "Temperature calibration",
+        "Ice buildup removal",
+        "Thermostat replacement",
+        "Seal maintenance",
+        "Preventive maintenance"
+      ]
+    },
+    {
+      "title": "Wine Cooler Repair",
+      "description": "Specialized wine storage system repair and maintenance",
+      "icon": "🍷",
+      "color": "blue",
+      "highlight": "Professional",
+      "details": [
+        "Temperature zone control",
+        "Humidity management",
+        "LED lighting repair",
+        "Vibration dampening",
+        "Ventilation system service"
+      ]
+    }
+  ],
+  "whyChooseUs": [
+    {
+      "title": "Sub-Zero Specialists",
+      "description": "Factory-trained technicians with extensive Sub-Zero experience",
+      "icon": "🏆"
+    },
+    {
+      "title": "Genuine OEM Parts",
+      "description": "Only authentic Sub-Zero parts to ensure optimal performance",
+      "icon": "🔧"
+    },
+    {
+      "title": "Fast Response",
+      "description": "Same-day service available throughout Orange County",
+      "icon": "⚡"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much does Sub-Zero repair cost?",
+      "answer": "Sub-Zero repair costs vary based on the issue and parts needed. We provide upfront estimates and use genuine OEM parts. Most repairs range from basic service calls to more complex compressor replacements."
+    },
+    {
+      "question": "Do you use genuine Sub-Zero parts?",
+      "answer": "Yes, we exclusively use genuine Sub-Zero OEM parts to ensure your appliance maintains its warranty and performs optimally. We stock a comprehensive inventory of Sub-Zero parts."
+    },
+    {
+      "question": "How long does Sub-Zero repair take?",
+      "answer": "Most Sub-Zero repairs are completed within 1-2 hours. Complex issues like compressor replacement may take longer, but we'll provide you with a clear timeline before starting work."
+    },
+    {
+      "question": "Do you service all Sub-Zero models?",
+      "answer": "Yes, our factory-trained technicians service all Sub-Zero refrigerators, freezers, wine coolers, and ice makers, including built-in, integrated, and undercounter models."
+    },
+    {
+      "question": "What's covered under your warranty?",
+      "answer": "We provide a comprehensive warranty on all Sub-Zero repairs and parts. Labor is typically warrantied for 90 days, while parts carry manufacturer warranties."
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Sarah M.",
+      "location": "Irvine, CA",
+      "rating": 5,
+      "service": "Sub-Zero Refrigerator Repair",
+      "review": "Outstanding service! My Sub-Zero refrigerator was repaired quickly and professionally. The technician was knowledgeable and used genuine parts. Highly recommend!"
+    },
+    {
+      "name": "David K.",
+      "location": "Newport Beach, CA",
+      "rating": 5,
+      "service": "Sub-Zero Wine Cooler Repair",
+      "review": "Excellent work on my Sub-Zero wine cooler. Temperature zones are now perfect and the LED lighting was fixed. Professional and courteous service."
+    },
+    {
+      "name": "Maria L.",
+      "location": "Laguna Hills, CA",
+      "rating": 5,
+      "service": "Sub-Zero Ice Maker Repair",
+      "review": "Fast and efficient ice maker repair. Same-day service and fair pricing. The technician explained everything clearly and cleaned up after the job."
+    },
+    {
+      "name": "Robert P.",
+      "location": "Mission Viejo, CA",
+      "rating": 5,
+      "service": "Sub-Zero Refrigerator Repair",
+      "review": "Professional service from start to finish. My Sub-Zero refrigerator works better than ever. Used genuine parts and provided a warranty on the work."
+    },
+    {
+      "name": "Jennifer T.",
+      "location": "Costa Mesa, CA",
+      "rating": 5,
+      "service": "Sub-Zero Freezer Repair",
+      "review": "Excellent freezer repair service. Quick diagnosis and repair of the defrost system. The technician was punctual and very knowledgeable about Sub-Zero appliances."
+    }
+  ]
+}

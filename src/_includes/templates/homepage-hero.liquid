@@ -1,0 +1,48 @@
+<!--
+  HOMEPAGE TEMPLATE: Hero Section
+  Purpose: Main hero banner for the homepage with brand showcase
+  Usage: Include this template in pages that need the homepage hero section
+  Dependencies: site.hero_title, site.hero_description, site.brands, brand data
+-->
+<!-- Main Hero Section -->
+<section class="hero-bg text-white py-20">
+  <div class="container mx-auto px-6 text-center">
+    <h1 class="text-5xl md:text-5xl font-bold mb-8">
+      {{ site.hero_title }}
+    </h1>
+    <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+      {{ site.hero_description }}
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+      <a href="{{ site.phone_href }}" class="bg-primefix-orange text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-primefix-orange-light transition transform hover:scale-105">
+        📞 {{ site.cta_primary }}
+      </a>
+      <a href="/brands/" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primefix-navy transition">
+        View Our Services
+      </a>
+    </div>
+    <div class="mt-12">
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        {% for brand_key in site.brands %}
+          {% if brand_key == 'sub-zero' %}
+            {% assign brand = sub-zero %}
+          {% elsif brand_key == 'wolf' %}
+            {% assign brand = wolf %}
+          {% elsif brand_key == 'cove' %}
+            {% assign brand = cove %}
+          {% endif %}
+          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+            <div class="w-32 h-16 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center">
+              <img
+                src="/assets/images/{{ brand.slug }}.svg"
+                alt="{{ brand.name }} Logo"
+                class="w-32 h-16 p-2">
+            </div>
+            <div class="text-xl font-semibold mb-2">{{ brand.name }}</div>
+            <p class="text-sm opacity-90">{{ brand.description }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

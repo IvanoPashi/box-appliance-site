@@ -1,0 +1,16 @@
+---
+layout: base
+---
+
+{% comment %}
+Brand Template Layout
+This template is used for brand-specific pages (Sub-Zero, Wolf, Cove)
+It provides consistent structure and styling for brand pages
+{% endcomment %}
+
+{% include 'brand-context' %}
+
+<!-- Brand Site Content -->
+<div class="brand-site-content brand-{{ current_brand }}" data-brand="{{ current_brand }}">
+    {{ content }}
+</div>

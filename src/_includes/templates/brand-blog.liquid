@@ -1,0 +1,267 @@
+<!--
+UNIFIED TEMPLATE: Brand Blog Page
+Purpose: Blog page content for brand pages
+Usage: Include this template in brand blog pages
+Variables: 
+- brand_data (required): Brand data from _data
+- page_title (required): Page title
+- page_subtitle (required): Page subtitle
+- page_description (required): Page description
+-->
+
+{% assign brand = brand_data %}
+
+{% include "templates/page-header.liquid" %}
+
+<!-- Blog Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- Blog Introduction with Brand Logo -->
+            <div class="text-center mb-16">
+                <div class="flex justify-center mb-8">
+                    <img src="/assets/images/{{ brand.slug }}.svg" alt="{{ brand.name }} Logo" class="h-28 w-auto">
+                </div>
+                <h3 class="text-2xl font-semibold mb-6 text-primefix-orange">{{ brand.name }} Appliance Care & Repair
+                    Insights</h3>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    Get expert advice from Orange County's leading {{ brand.name }} repair specialists. Our {{
+                    brand.qualification | downcase }} technicians share maintenance tips, troubleshooting guides, and
+                    repair insights to help keep your {{ brand.name }} appliances running perfectly.
+                </p>
+            </div>
+
+            <!-- Featured Articles -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-gray-800">Featured Articles</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {% assign brand_collection = brand.slug | append: "Blog" %}
+                    {% for post in collections[brand_collection] limit: 6 %}
+                    <article
+                        class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-gray-800">
+                                <a href="{{ post.url }}" class="hover:text-primefix-orange transition">
+                                    {{ post.data.title }}
+                                </a>
+                            </h4>
+                            <p class="text-gray-600 mb-4">
+                                {{ post.data.description | excerpt: 120 }}
+                            </p>
+                            <div class="flex items-center justify-between text-sm text-gray-500">
+                                <span>{{ post.date | dateReadable }}</span>
+                                <span>{{ post.content | readingTime }}</span>
+                            </div>
+                            <div class="mt-4">
+                                <a href="{{ post.url }}"
+                                    class="text-primefix-orange hover:text-orange-600 font-semibold">
+                                    Read More →
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    {% else %}
+                    <!-- Default articles when no blog posts exist -->
+                    <article class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-gray-800">
+                                {{ brand.name }} Maintenance Schedule
+                            </h4>
+                            <p class="text-gray-600 mb-4">
+                                Complete maintenance guide for {{ brand.name }} appliances. Learn essential care tasks
+                                to keep your premium appliances performing at their best.
+                            </p>
+                            <div class="flex items-center justify-between text-sm text-gray-500">
+                                <span>Coming Soon</span>
+                                <span>6 min read</span>
+                            </div>
+                            <div class="mt-4">
+                                <span class="text-gray-400">Coming Soon</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-gray-800">
+                                {{ brand.name }} Troubleshooting Guide
+                            </h4>
+                            <p class="text-gray-600 mb-4">
+                                Expert troubleshooting guide for common {{ brand.name }} problems. Professional tips for
+                                optimal performance and when to call for service.
+                            </p>
+                            <div class="flex items-center justify-between text-sm text-gray-500">
+                                <span>Coming Soon</span>
+                                <span>8 min read</span>
+                            </div>
+                            <div class="mt-4">
+                                <span class="text-gray-400">Coming Soon</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-gray-800">
+                                {{ brand.name }} Repair Tips
+                            </h4>
+                            <p class="text-gray-600 mb-4">
+                                Professional {{ brand.name }} repair tips and maintenance advice. Learn how to extend
+                                the life of your premium appliances.
+                            </p>
+                            <div class="flex items-center justify-between text-sm text-gray-500">
+                                <span>Coming Soon</span>
+                                <span>5 min read</span>
+                            </div>
+                            <div class="mt-4">
+                                <span class="text-gray-400">Coming Soon</span>
+                            </div>
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Blog Categories -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-gray-800">{{ brand.name }} Care Categories</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {% if brand.name == "Sub-Zero" %}
+                    <div class="bg-blue-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl mb-3">🧊</div>
+                        <h4 class="font-semibold mb-2">Refrigerator Care</h4>
+                        <p class="text-gray-600 text-sm">Maintenance tips for Sub-Zero refrigerators</p>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl mb-3">🍷</div>
+                        <h4 class="font-semibold mb-2">Wine Storage</h4>
+                        <p class="text-gray-600 text-sm">Wine cooler maintenance and care</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl mb-3">🔧</div>
+                        <h4 class="font-semibold mb-2">Troubleshooting</h4>
+                        <p class="text-gray-600 text-sm">Common issues and solutions</p>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl mb-3">⚙️</div>
+                        <h4 class="font-semibold mb-2">Maintenance</h4>
+                        <p class="text-gray-600 text-sm">Preventive care schedules</p>
+                    </div>
+                    {% elsif brand.name == "Wolf" %}
+                    <div class="bg-red-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl mb-3">🔥</div>
+                        <h4 class="font-semibold mb-2">Range Care</h4>
+                        <p class="text-gray-600 text-sm">Wolf range maintenance tips</p>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl mb-3">🍳</div>
+                        <h4 class="font-semibold mb-2">Oven Care</h4>
+                        <p class="text-gray-600 text-sm">Oven maintenance and cleaning</p>
+                    </div>
+                    <div class="bg-yellow-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl mb-3">🔧</div>
+                        <h4 class="font-semibold mb-2">Troubleshooting</h4>
+                        <p class="text-gray-600 text-sm">Common issues and solutions</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl mb-3">⚙️</div>
+                        <h4 class="font-semibold mb-2">Maintenance</h4>
+                        <p class="text-gray-600 text-sm">Preventive care schedules</p>
+                    </div>
+                    {% elsif brand.name == "Cove" %}
+                    <div class="bg-blue-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl mb-3">💎</div>
+                        <h4 class="font-semibold mb-2">Dishwasher Care</h4>
+                        <p class="text-gray-600 text-sm">Maintenance tips for Cove dishwashers</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl mb-3">🔧</div>
+                        <h4 class="font-semibold mb-2">Troubleshooting</h4>
+                        <p class="text-gray-600 text-sm">Common issues and solutions</p>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl mb-3">⚙️</div>
+                        <h4 class="font-semibold mb-2">Maintenance</h4>
+                        <p class="text-gray-600 text-sm">Preventive care schedules</p>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-lg text-center">
+                        <div class="text-3xl mb-3">🏆</div>
+                        <h4 class="font-semibold mb-2">Performance</h4>
+                        <p class="text-gray-600 text-sm">Optimization tips</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Recent Posts -->
+            {% if collections[brand_collection] and collections[brand_collection].size > 0 %}
+            <div class="mb-16">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800">Latest {{ brand.name }} Articles</h3>
+                    <a href="#" class="text-primefix-orange hover:text-orange-600 font-semibold">
+                        View All Articles →
+                    </a>
+                </div>
+                <div class="space-y-6">
+                    {% for post in collections[brand_collection] %}
+                    <article class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between">
+                            <div class="flex-1">
+                                <h4 class="text-xl font-semibold mb-2 text-gray-800">
+                                    <a href="{{ post.url }}" class="hover:text-primefix-orange transition">
+                                        {{ post.data.title }}
+                                    </a>
+                                </h4>
+                                <p class="text-gray-600 mb-3">
+                                    {{ post.data.description | excerpt: 160 }}
+                                </p>
+                                <div class="flex items-center text-sm text-gray-500 space-x-4">
+                                    <span>{{ post.date | dateReadable }}</span>
+                                    <span>{{ post.content | readingTime }}</span>
+                                    {% if post.data.tags %}
+                                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">
+                                        {{ post.data.tags | join: ', ' }}
+                                    </span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:ml-6">
+                                <a href="{{ post.url }}"
+                                    class="bg-primefix-orange text-white px-4 py-2 rounded hover:bg-orange-600 transition">
+                                    Read Article
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Newsletter Signup -->
+            <div class="bg-{{ brand.color_class | default: 'blue' }}-50 p-8 rounded-lg text-center">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Stay Updated on {{ brand.name }} Care</h3>
+                <p class="text-lg text-gray-700 mb-6">
+                    Get expert {{ brand.name }} maintenance tips and repair insights delivered to your inbox. Subscribe
+                    for the latest advice from Orange County's {{ brand.qualification | downcase }} technicians.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="/{{ brand.slug }}/contact/"
+                        class="bg-primefix-orange text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition">
+                        Subscribe to Updates
+                    </a>
+                    <a href="{{ site.phone_href }}"
+                        class="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition">
+                        Call for Expert Advice
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+{% assign cta_style = "brand" %}
+{% assign brand_data = brand %}
+{% assign cta_title = "Need " | append: brand.name | append: " Repair Help?" %}
+{% assign cta_description = "Get expert " | append: brand.name | append: " repair advice and service from Orange
+County's specialists" %}
+{% include "templates/cta-section.liquid" %}

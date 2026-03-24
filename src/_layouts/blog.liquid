@@ -1,0 +1,206 @@
+---
+layout: base.liquid
+---
+
+{% assign article_author = author %}
+{% if author == "{{ site.company }} Team" %}
+{% assign article_author = site.company | append: " Team" %}
+{% elsif author == "{{ site.company }}" %}
+{% assign article_author = site.company %}
+{% endif %}
+
+<!-- Enhanced Article Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ title | template: site }}",
+    "description": "{% if excerpt %}{{ excerpt | template: site }}{% else %}{{ description | template: site }}{% endif %}",
+    "image": [
+        "{% if image %}{{ site.url }}{{ image }}{% else %}{{ site.url }}/assets/images/primefix-social-card.jpg{% endif %}",
+        "{{ site.url }}/assets/images/primefix-social-card-square.jpg"
+    ],
+    "author": {
+        "@type": "Organization",
+        "name": "{{ article_author | default: site.company }}",
+        "url": "{{ site.url }}"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.company }}",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "{{ site.url }}/assets/images/logo.svg"
+        }
+    },
+    "datePublished": "{{ date | date: '%Y-%m-%d' }}",
+    "dateModified": "{{ date | date: '%Y-%m-%d' }}",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}{{ page.url }}"
+    },
+    "articleSection": "Appliance Repair",
+    "keywords": "{{ keywords | default: tags | join: ', ' }}",
+    "wordCount": "{{ content | strip_html | number_of_words }}",
+    "inLanguage": "en-US",
+    "isPartOf": {
+        "@type": "WebSite",
+        "@id": "{{ site.url }}"
+    },
+    "about": {
+        "@type": "Thing",
+        "name": "Sub-Zero Appliance Repair"
+    }
+}
+</script>
+
+<!-- FAQ Structured Data if applicable -->
+{% if page.url contains 'maintenance' or page.url contains 'troubleshooting' or page.url contains 'guide' %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How often should I service my Sub-Zero appliance?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We recommend professional Sub-Zero maintenance annually to ensure optimal performance and prevent costly repairs."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are signs my Sub-Zero needs repair?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Common signs include temperature fluctuations, unusual noises, ice maker problems, water leaks, or error codes on the display."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you use genuine Sub-Zero parts?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we exclusively use genuine OEM Sub-Zero parts to ensure optimal performance and maintain your warranty coverage."
+            }
+        }
+    ]
+}
+</script>
+{% endif %}
+
+<div class="pt-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Blog Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8">{{ title | template: site }}</h1>
+            {% if date %}
+            <div class="flex items-center justify-center text-gray-600 mb-4">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                <time datetime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: '%B %d, %Y' }}</time>
+            </div>
+            {% endif %}
+            {% if author %}
+            <div class="flex items-center justify-center text-gray-600 mb-6">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+                <span>By {{ article_author | default: site.company }}</span>
+            </div>
+            {% endif %}
+            {% if excerpt %}
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">{{ excerpt | template: site }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Featured Image -->
+        {% if image %}
+        <div class="mb-12">
+            <img src="{{ image }}"
+                alt="{% if alt %}{{ alt | template: site }}{% else %}{{ title | template: site }} - Professional Sub-Zero repair service{% endif %}"
+                class="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg" loading="lazy">
+        </div>
+        {% endif %}
+
+        <!-- Back to Blog Button -->
+        <div class="mb-8">
+            <a href="/blog/"
+                class="inline-flex items-center text-primefix-orange hover:text-primefix-orange-light transition group">
+                <svg class="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Back to Blog
+            </a>
+        </div>
+
+        <!-- Breadcrumb Navigation -->
+        <nav class="mb-8" aria-label="Breadcrumb">
+            <ol class="flex items-center space-x-2 text-sm text-gray-500">
+                <li><a href="/" class="hover:text-primefix-navy transition">Home</a></li>
+                <li><span class="mx-2">/</span></li>
+                <li><a href="/blog/" class="hover:text-primefix-navy transition">Blog</a></li>
+                <li><span class="mx-2">/</span></li>
+                <li class="text-gray-900 font-medium" aria-current="page">{{ title | template: site }}</li>
+            </ol>
+        </nav>
+
+        <!-- Blog Content -->
+        <article class="prose-custom max-w-none">
+            {{ content }}
+        </article>
+
+        <!-- Social Share - Only show on individual blog articles -->
+        {% if page.url contains '/blog/' and page.url != '/blog/' %}
+        <div class="mt-12 pt-8 border-t border-gray-200">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Share this article</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ title | template: site }}"
+                            target="_blank" rel="noopener" class="text-gray-600 hover:text-blue-500 transition-colors"
+                            aria-label="Share on Twitter">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
+                            target="_blank" class="text-gray-600 hover:text-primefix-orange transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+                            target="_blank" class="text-gray-600 hover:text-primefix-orange transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Blog Button - Bottom -->
+        <div class="mt-8 text-center">
+            <a href="/blog/"
+                class="inline-flex items-center bg-primefix-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-primefix-orange-light transition group">
+                <svg class="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Back to All Articles
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>

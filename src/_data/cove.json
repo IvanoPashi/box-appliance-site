@@ -1,0 +1,147 @@
+{
+  "name": "Cove",
+  "slug": "cove",
+  "color_class": "primefix-orange",
+  "qualification": "Specialized",
+  "experience": "10+ years",
+  "warranty": "1-Year",
+  "accent": "💎",
+  "logo": "/assets/images/cove.svg",
+  "description": "Premium dishwashers, kitchen appliances and maintenance",
+  "models": [
+    "DW Series Dishwashers",
+    "Panel Ready Dishwashers",
+    "Stainless Steel Dishwashers",
+    "24-inch Dishwashers",
+    "Compact Dishwashers",
+    "Built-in Dishwashers",
+    "Undercounter Models",
+    "Custom Panel Models"
+  ],
+  "hero": {
+    "image": "/assets/images/cove-repair-hero.webp",
+    "services_text": "Expert dishwasher repair and maintenance for all Cove models"
+  },
+  "services": [
+    {
+      "title": "Dishwasher Repair & Maintenance",
+      "description": "Complete dishwasher repair and maintenance services",
+      "icon": "💎",
+      "color": "green",
+      "highlight": "Premium Service",
+      "details": [
+        "Wash cycle problems",
+        "Water drainage issues",
+        "Control panel repair",
+        "Rack adjustment",
+        "Filter cleaning",
+        "Spray arm maintenance",
+        "Preventive maintenance"
+      ]
+    },
+    {
+      "title": "Control Panel Repair",
+      "description": "Electronic control system diagnostics and repair",
+      "icon": "💎",
+      "color": "green",
+      "highlight": "Expert Tech",
+      "details": [
+        "Display screen repair",
+        "Button replacement",
+        "Circuit board service",
+        "Software updates",
+        "Touch panel calibration"
+      ]
+    },
+    {
+      "title": "Maintenance Service",
+      "description": "Preventive maintenance to ensure optimal performance",
+      "icon": "💎",
+      "color": "green",
+      "highlight": "Guaranteed",
+      "details": [
+        "Deep cleaning service",
+        "Filter replacement",
+        "Seal inspection",
+        "Spray arm cleaning",
+        "Performance optimization"
+      ]
+    }
+  ],
+  "whyChooseUs": [
+    {
+      "title": "Cove Experts",
+      "description": "Specialized knowledge in Cove dishwasher systems",
+      "icon": "🏆"
+    },
+    {
+      "title": "Quality Parts",
+      "description": "Genuine Cove parts for long-lasting repairs",
+      "icon": "🔧"
+    },
+    {
+      "title": "Reliable Service",
+      "description": "Dependable repair service with satisfaction guarantee",
+      "icon": "⚡"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much does Cove dishwasher repair cost?",
+      "answer": "Cove dishwasher repair costs vary based on the specific issue and parts needed. We provide upfront pricing and use genuine Cove parts for all repairs."
+    },
+    {
+      "question": "Do you service all Cove dishwasher models?",
+      "answer": "Yes, we service all Cove dishwasher models including built-in, panel-ready, and undercounter configurations. Our technicians are trained on all Cove systems."
+    },
+    {
+      "question": "How long does Cove dishwasher repair take?",
+      "answer": "Most Cove dishwasher repairs are completed within 1-2 hours. More complex issues may require additional time, but we'll provide you with a clear timeline."
+    },
+    {
+      "question": "What's your warranty on Cove repairs?",
+      "answer": "We provide comprehensive warranty coverage on all Cove repairs and genuine parts. Labor is typically covered for 90 days with manufacturer warranties on parts."
+    },
+    {
+      "question": "Can you help with Cove maintenance?",
+      "answer": "Yes, we offer preventive maintenance services for Cove dishwashers including deep cleaning, filter replacement, and performance optimization to extend appliance life."
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Jennifer L.",
+      "location": "Mission Viejo, CA",
+      "rating": 5,
+      "service": "Cove Dishwasher Repair",
+      "review": "Professional and reliable! Fixed my Cove dishwasher perfectly. The team was courteous and cleaned up after the job. Will definitely use again."
+    },
+    {
+      "name": "Kevin M.",
+      "location": "Aliso Viejo, CA",
+      "rating": 5,
+      "service": "Cove Control Panel Repair",
+      "review": "Excellent repair of my Cove dishwasher control panel. The display works perfectly now and the technician was very knowledgeable about Cove systems."
+    },
+    {
+      "name": "Patricia D.",
+      "location": "Laguna Niguel, CA",
+      "rating": 5,
+      "service": "Cove Maintenance Service",
+      "review": "Outstanding preventive maintenance service. My Cove dishwasher runs quieter and cleaner than ever. Professional and thorough work."
+    },
+    {
+      "name": "Steven R.",
+      "location": "Dana Point, CA",
+      "rating": 5,
+      "service": "Cove Dishwasher Repair",
+      "review": "Fast and efficient Cove dishwasher repair. The drainage issue was fixed quickly and the technician provided helpful maintenance tips."
+    },
+    {
+      "name": "Carol J.",
+      "location": "San Juan Capistrano, CA",
+      "rating": 5,
+      "service": "Cove Dishwasher Repair",
+      "review": "Excellent service on my Cove dishwasher. Used genuine parts and the repair was completed quickly. The technician was very professional."
+    }
+  ]
+}

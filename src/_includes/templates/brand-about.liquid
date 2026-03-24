@@ -1,0 +1,132 @@
+<!--
+UNIFIED TEMPLATE: Brand About Page
+Purpose: About page content for brand pages
+Usage: Include this template in brand about pages
+Variables: 
+- brand_data (required): Brand data from _data
+- page_title (required): Page title
+- page_subtitle (required): Page subtitle
+- page_description (required): Page description
+-->
+
+{% assign brand = brand_data %}
+
+{% include "templates/page-header.liquid" %}
+
+<!-- About Brand Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+            <!-- Brand Hero with Logo -->
+            <div class="text-center mb-16">
+                <div class="flex justify-center mb-8">
+                    <img src="/assets/images/{{ brand.slug }}.svg" alt="{{ brand.name }} Logo" class="h-32 w-auto">
+                </div>
+                <h3 class="text-3xl font-semibold mb-6 text-primefix-orange">Your Trusted {{ brand.name }} Repair
+                    Specialists</h3>
+                <p class="text-lg text-gray-700 mb-6">
+                    {{ site.company }} is Orange County's premier {{ brand.name }} appliance repair service. Since
+                    2015, our {{ brand.qualification | downcase }} technicians have been providing expert repair
+                    services for all {{ brand.name }} appliances throughout Orange County.
+                </p>
+                <p class="text-lg text-gray-700 mb-6">
+                    {{ brand.name }} appliances represent the pinnacle of {{ brand.description | downcase }} technology.
+                    Our specialized knowledge and genuine {{ brand.name }} parts ensure your appliances receive the
+                    highest quality repair service, maintaining their premium performance and extending their lifespan.
+                </p>
+            </div>
+
+            <!-- Brand Services Overview -->
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                {% for service in brand.services limit: 2 %}
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800">{{ service.icon }} {{ service.title }}</h4>
+                    <p class="text-gray-700 mb-4">{{ service.description }}</p>
+                    <ul class="text-gray-700 space-y-2">
+                        {% for detail in service.details limit: 5 %}
+                        <li>• {{ detail }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Why Choose Us Section -->
+            {% assign why_style = "brand" %}
+            {% assign brand_data = brand %}
+            {% include "templates/why-choose-us.liquid" %}
+
+            <!-- Brand Experience -->
+            <div class="bg-{{ brand.color_class | default: 'blue' }}-50 p-8 rounded-lg mb-16">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">{{ brand.experience | capitalize }} of {{
+                    brand.name }} Experience</h3>
+                <p class="text-lg text-gray-700 mb-4">
+                    Since 2015, we've been the go-to {{ brand.name }} repair specialists in Orange County.
+                    Our extensive experience with {{ brand.name }} appliances means we can quickly diagnose problems and
+                    provide
+                    effective solutions.
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold mb-2">{{ brand.name }} Appliances We Service:</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            {% if brand.name == "Sub-Zero" %}
+                            <li>• Built-in Refrigerators</li>
+                            <li>• Wine Storage Systems</li>
+                            <li>• Freezer Columns</li>
+                            <li>• Undercounter Units</li>
+                            <li>• Ice Makers</li>
+                            {% elsif brand.name == "Wolf" %}
+                            <li>• Gas & Electric Ranges</li>
+                            <li>• Built-in Ovens</li>
+                            <li>• Cooktops & Rangetops</li>
+                            <li>• Ventilation Hoods</li>
+                            <li>• Warming Drawers</li>
+                            {% elsif brand.name == "Cove" %}
+                            <li>• Built-in Dishwashers</li>
+                            <li>• Panel Ready Models</li>
+                            <li>• Stainless Steel Units</li>
+                            <li>• Integrated Dishwashers</li>
+                            <li>• Drawer Dishwashers</li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">Common {{ brand.name }} Issues We Fix:</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            {% if brand.name == "Sub-Zero" %}
+                            <li>• Not cooling properly</li>
+                            <li>• Ice maker malfunctions</li>
+                            <li>• Door seal problems</li>
+                            <li>• Temperature fluctuations</li>
+                            <li>• Compressor failures</li>
+                            {% elsif brand.name == "Wolf" %}
+                            <li>• Temperature problems</li>
+                            <li>• Ignition failures</li>
+                            <li>• Control panel issues</li>
+                            <li>• Heating element problems</li>
+                            <li>• Door seal replacement</li>
+                            {% elsif brand.name == "Cove" %}
+                            <li>• Poor cleaning performance</li>
+                            <li>• Water drainage problems</li>
+                            <li>• Unusual noise levels</li>
+                            <li>• Control panel malfunctions</li>
+                            <li>• Door seal issues</li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews Section -->
+{% include "templates/reviews.liquid" %}
+
+<!-- CTA Section -->
+{% assign cta_style = "brand" %}
+{% assign brand_data = brand %}
+{% assign cta_title = "Ready to Fix Your " | append: brand.name | append: " Appliance?" %}
+{% assign cta_description = "Professional " | append: brand.name | append: " repair service throughout Orange County" %}
+{% include "templates/cta-section.liquid" %}

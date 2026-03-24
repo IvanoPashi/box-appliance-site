@@ -1,0 +1,19 @@
+---
+layout: location
+eleventyNavigation:
+  key: Wolf Locations
+  parent: Wolf
+  order: 2
+pagination:
+  data: locations.locations
+  size: 1
+  alias: location
+eleventyComputed:
+  title: "Wolf Repair in {{ location.name }}, CA | Professional Service"
+  description: "Expert Wolf repair in {{ location.name }}, CA. Professional range, oven & cooktop service. Factory-trained techs, same-day service. Call {{ site.phone }}!"
+  keywords: "Wolf repair in {{ location.name }}, appliance repair in {{ location.name }}, range repair in {{ location.name }}, oven repair in {{ location.name }}, cooktop repair in {{ location.name }}, Wolf technician in {{ location.name }}"
+  ogTitle: "Wolf Appliance Repair {{ location.name }} CA | Professional Service"
+  ogDescription: "Expert Wolf appliance repair in {{ location.name }}, CA. Professional range, oven & cooktop service. Same-day service available."
+  brand: "wolf"
+  permalink: "/wolf/{{ location.name | slugify }}/"
+---

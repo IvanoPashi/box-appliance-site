@@ -1,0 +1,192 @@
+<!--
+UNIFIED TEMPLATE: Brand Service Area
+Purpose: Service area page for each brand showing coverage throughout Orange County
+Usage: Include this template in brand service area pages
+Variables: brand_data (from brand assignment)
+-->
+
+{% include "templates/page-header.liquid" %}
+
+<!-- Service Area Page Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- SEO Article -->
+            <div class="mb-16 bg-{{ brand_data.colors.light }} p-8 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-6 text-{{ brand_data.colors.primary }}">Professional {{
+                    brand_data.name }} Repair Near You</h3>
+                <p class="text-lg text-gray-700 mb-4">
+                    {{ site.company }} proudly serves the entire Orange County area with expert {{ brand_data.name }}
+                    appliance repair services. Whether you're searching for "{{ brand_data.name }} repair near me" or
+                    "{{ brand_data.name }} service in my area," our centrally located Irvine facility allows us to
+                    provide
+                    fast, reliable service throughout Orange County.
+                </p>
+                <p class="text-lg text-gray-700 mb-4">
+                    Our comprehensive service area covers all major cities and communities in Orange County, from
+                    the coastal areas to the inland valleys. We understand that {{ brand_data.name }} appliances are a
+                    significant investment, and when they need repair, you want service from local experts who can
+                    respond quickly.
+                </p>
+                <p class="text-lg text-gray-700">
+                    Living in Orange County means dealing with unique environmental factors that can affect your
+                    {{ brand_data.name }} appliances, including coastal humidity, hard water, and power fluctuations.
+                    Our local
+                    technicians understand these challenges and are equipped with the knowledge and genuine {{
+                    brand_data.name }} parts to address
+                    them effectively.
+                </p>
+            </div>
+
+            <!-- Brand-Specific Service Info -->
+            <div class="mb-16 bg-gray-50 p-8 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-6 text-{{ brand_data.colors.primary }}">{{ brand_data.name }}
+                    Service Excellence</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">Why Choose Us for {{ brand_data.name }}?
+                        </h4>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• {{ brand_data.certification }} factory-trained technicians</li>
+                            <li>• Genuine {{ brand_data.name }} OEM parts inventory</li>
+                            <li>• Same-day emergency service available</li>
+                            <li>• {{ brand_data.warranty }} warranty on all repairs</li>
+                            <li>• {{ site.experience_years }} of {{ brand_data.name }} experience</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">{{ brand_data.name }} Models We Service
+                        </h4>
+                        <p class="text-gray-700 mb-3">
+                            Our technicians are trained to work on all {{ brand_data.name }} appliance models and
+                            series:
+                        </p>
+                        <ul class="text-gray-700 space-y-1">
+                            {% for model in brand_data.models %}
+                            <li>• {{ model }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cities Grid -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-8 text-{{ brand_data.colors.primary }} text-center">Orange County
+                    Cities We Serve</h3>
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Aliso Viejo</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Anaheim</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Anaheim Hills</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Brea</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Buena Park</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Costa Mesa</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Coto de Caza</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Cypress</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Dana Point</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Fountain Valley</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Fullerton</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Garden Grove</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Huntington Beach</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Irvine</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Laguna Beach</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Laguna Hills</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Laguna Niguel</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Lake Forest</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Los Alamitos</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Mission Viejo</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Newport Beach</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Newport Coast</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Orange</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Placentia</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Rancho Santa Margarita</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">San Clemente</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">San Juan Capistrano</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Santa Ana</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Seal Beach</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Stanton</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Tustin</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Villa Park</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Westminster</h4>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center hover:bg-gray-100 transition">
+                        <h4 class="font-semibold text-gray-700">Yorba Linda</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+{% assign cta_style = "brand" %}
+{% assign brand_data = brand %}
+{% assign cta_title = "Ready to Schedule Your " | append: brand.name | append: " Repair?" %}
+{% assign cta_description = "Don't let " | append: brand.name | append: " appliance problems disrupt your routine.
+Contact our expert technicians today." %}
+{% include "templates/cta-section.liquid" %}

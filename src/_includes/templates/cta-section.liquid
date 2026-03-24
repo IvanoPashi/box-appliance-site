@@ -1,0 +1,82 @@
+<!--
+UNIFIED TEMPLATE: CTA Section
+Purpose: Call-to-action section for both main pages and brand pages
+Usage: Include this template in pages that need a CTA section
+Variables: 
+- cta_title (optional, defaults based on context)
+- cta_description (optional, defaults based on context)
+- cta_style: "main" or "brand" (optional, defaults to "main")
+- brand_data (required for brand style)
+-->
+{% if cta_style == "brand" and brand_data %}
+<section class="py-16 bg-{{ brand_data.color_class | default: 'primefix-orange' }} text-white">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">
+            {% if cta_title %}
+            {{ cta_title }}
+            {% else %}
+            Ready to Fix Your {{ brand_data.name }} Appliance?
+            {% endif %}
+        </h2>
+        <p class="text-xl mb-8">
+            {% if cta_description %}
+            {{ cta_description }}
+            {% else %}
+            Contact our {{ brand_data.name }} repair specialists today
+            {% endif %}
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{{ site.phone_href }}"
+                class="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-primefix-orange-light transition">
+                📞 Call {{ site.phone }}
+            </a>
+            <a href="/{{ brand_data.slug }}/contact/"
+                class="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primefix-navy transition">
+                Get Free Quote
+            </a>
+        </div>
+    </div>
+</section>
+{% else %}
+<section class="py-16 bg-primefix-orange text-white">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">{{ cta_title | default: "Need Emergency Appliance Repair?" }}
+        </h2>
+        <p class="text-xl mb-8 opacity-90">
+            {% if cta_description %}
+            {{ cta_description }}
+            {% else %}
+            Professional technicians ready to help. Same-day service available throughout {{ site.service_area }}.
+            {% endif %}
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="{{ site.phone_href }}"
+                class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primefix-navy transition">
+                📞 {{ site.cta_primary }}
+            </a>
+            <a href="/contact/"
+                class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primefix-navy transition">
+                {{ site.cta_secondary }}
+            </a>
+        </div>
+
+        <div class="mt-8 grid md:grid-cols-3 gap-6 text-center">
+            <div>
+                <div class="text-2xl font-bold">{% if site.emergency_service %}Same Day{% else %}Next Day{% endif %}
+                </div>
+                <div class="opacity-90">Emergency Service</div>
+            </div>
+            <div>
+                <div class="text-2xl font-bold">{{ site.warranty_years }} Year</div>
+                <div class="opacity-90">Warranty</div>
+            </div>
+            <div>
+                <div class="text-2xl font-bold">{{ site.experience_years }}</div>
+                <div class="opacity-90">Experience</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

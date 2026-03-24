@@ -1,0 +1,16 @@
+---
+layout: main
+eleventyComputed:
+  title: "{{ site.title }}"
+  description: "{{ site.description }}"
+  keywords: "{{ site.keywords }}"
+  ogTitle: "{{ site.hero_title }}"
+  ogDescription: "{{ site.hero_description }} • Call {{ site.phone }} for premium appliance repair!"
+  ogImage: "/assets/images/primefix-social-card.jpg"
+---
+
+{% include "templates/homepage-hero.liquid" %}
+{% include "templates/seo-introduction.liquid" %}
+{% include "templates/reviews.liquid" %}
+{% include "templates/why-choose-us.liquid" %}
+{% include "templates/cta-section.liquid" %}

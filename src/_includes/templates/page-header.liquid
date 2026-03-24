@@ -1,0 +1,25 @@
+<!--
+UNIFIED TEMPLATE: Page Header
+Purpose: Standard header for all main pages
+Usage: Include this template in pages that need a page header
+Variables: title, subtitle (optional), description (optional)
+-->
+{% assign header_title = page_title | default: title %}
+{% assign header_subtitle = page_subtitle | default: subtitle %}
+{% assign header_description = page_description | default: description %}
+{% assign resolved_header_title = header_title | replace: "{{ site.company }}", site.company | replace: "{{ site.phone }}", site.phone | replace: "{{ site.email }}", site.email %}
+{% assign resolved_header_subtitle = header_subtitle | replace: "{{ site.company }}", site.company | replace: "{{ site.phone }}", site.phone | replace: "{{ site.email }}", site.email %}
+{% assign resolved_header_description = header_description | replace: "{{ site.company }}", site.company | replace: "{{ site.phone }}", site.phone | replace: "{{ site.email }}", site.email %}
+<section class="hero-bg py-20 text-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-8">{{ resolved_header_title }}</h1>
+            {% if header_subtitle %}
+            <p class="text-xl opacity-90 mb-8">{{ resolved_header_subtitle }}</p>
+            {% endif %}
+            {% if header_description %}
+            <p class="text-lg opacity-80 max-w-3xl mx-auto">{{ resolved_header_description }}</p>
+            {% endif %}
+        </div>
+    </div>
+</section>

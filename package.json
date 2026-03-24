@@ -1,0 +1,41 @@
+{
+  "name": "primefix-website",
+  "version": "3.0.0",
+  "description": "PrimeFix Appliances - Premium Sub-Zero, Wolf & Cove Repair in Orange County",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./_site && npm run build:css && NODE_ENV=production npx @11ty/eleventy",
+    "build:css": "tailwindcss -i ./src/css/input.css -o ./_site/css/style.css --watch=false --minify",
+    "dev": "npm run build:css && concurrently \"npm run dev:css\" \"npm run dev:11ty\"",
+    "dev:css": "tailwindcss -i ./src/css/input.css -o ./_site/css/style.css --watch",
+    "dev:11ty": "npx @11ty/eleventy --serve",
+    "start": "npm run dev",
+    "serve": "npx @11ty/eleventy --serve",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
+  },
+  "keywords": [
+    "appliance repair",
+    "sub-zero repair",
+    "wolf repair",
+    "cove repair",
+    "orange county",
+    "eleventy",
+    "tailwind"
+  ],
+  "author": "PrimeFix Appliances",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IvanoPashi/primefix.git"
+  },
+  "homepage": "https://primefixrepair.com",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@minify-html/node": "^0.16.4",
+    "@tailwindcss/cli": "^4.1.0",
+    "concurrently": "^9.1.0"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.1.0"
+  }
+}
